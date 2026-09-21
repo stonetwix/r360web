@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Lager_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 36 36">
+  <!-- Generator: Adobe Illustrator 30.8.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 1)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2 {
+        fill: none;
+      }
+
+      .st1 {
+        stroke: #b3572a;
+      }
+
+      .st1, .st2 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.35px;
+      }
+
+      .st3 {
+        clip-path: url(#clippath);
+      }
+
+      .st2 {
+        stroke: #0a3a5b;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st0" width="36" height="36"/>
+    </clipPath>
+  </defs>
+  <g class="st3">
+    <polyline class="st2" points="5.25 18.75 18 8.25 30.75 18.75"/>
+    <polyline class="st2" points="9 18.75 9 29.25 27 29.25 27 18.75"/>
+    <path class="st1" d="M16.5,22.5h3.75c.21,0,.38.07.53.22s.22.32.22.53v5.25c0,.21-.07.38-.22.53s-.32.22-.53.22h-3.75c-.21,0-.38-.07-.53-.22-.15-.15-.22-.32-.22-.53v-5.25c0-.21.07-.38.22-.53.15-.15.32-.22.53-.22Z"/>
+    <polyline class="st2" points="21.37 13.88 21.37 7.5 25.12 7.5 25.12 13.88"/>
+  </g>
+</svg>

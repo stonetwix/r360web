@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Lager_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 36 36">
+  <!-- Generator: Adobe Illustrator 30.8.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #b2562a;
+      }
+
+      .st1 {
+        fill: none;
+        stroke: #0e3a5b;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.35px;
+      }
+
+      .st2 {
+        fill: #e7e2d6;
+      }
+    </style>
+  </defs>
+  <path class="st2" d="M18.25,29.66V12.41c0-4.5,3.75-6.75,8.25-4.88-3.75,1.12-3.75,3.38-3.75,6.38v15.75h-4.5Z"/>
+  <path class="st1" d="M18.25,29.66V12.41c0-4.5,3.75-6.75,8.25-4.88-3.75,1.12-3.75,3.38-3.75,6.38v15.75h-4.5Z"/>
+  <path class="st2" d="M9.5,29.66V12.41c0-4.5,3.75-6.75,8.25-4.88-3.75,1.12-3.75,3.38-3.75,6.38v15.75h-4.5Z"/>
+  <path class="st1" d="M9.5,29.66V12.41c0-4.5,3.75-6.75,8.25-4.88-3.75,1.12-3.75,3.38-3.75,6.38v15.75h-4.5Z"/>
+  <path class="st0" d="M9.88,18.41h3.75c.21,0,.38.07.53.22s.22.32.22.53v1.88c0,.21-.07.38-.22.53s-.32.22-.53.22h-3.75c-.21,0-.38-.07-.53-.22s-.22-.32-.22-.53v-1.88c0-.21.07-.38.22-.53s.32-.22.53-.22Z"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" preserveAspectRatio="none">
+  <!-- Dekor: mjuka höjdkurvor, samma formspråk som illustrationerna. -->
+  <g fill="none" stroke="#F4EFE4" stroke-width="2" stroke-linecap="round">
+    <path d="M-40 96C140 34 300 128 520 92S880 18 1240 84" stroke-opacity=".16"/>
+    <path d="M-40 156C170 92 320 186 540 150S900 76 1240 142" stroke-opacity=".12"/>
+    <path d="M-40 226C150 168 340 254 560 216S920 146 1240 210" stroke-opacity=".09"/>
+    <path d="M-40 300C180 246 350 322 570 288S940 220 1240 280" stroke-opacity=".06"/>
+  </g>
+</svg>

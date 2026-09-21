@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>r360 | Hela upplevelsen. En plattform.</title>
+    <meta
+      name="description"
+      content="Logi, skipass, uthyrning, skidskola och aktiviteter i ett system. En varukorg och en betalning för gästen."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600&family=EB+Garamond:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Hoppa till innehållet</a>
+
+    <header class="site-header" id="siteHeader">
+      <div class="container">
+        <div class="header-inner">
+          <a class="brand" href="#" aria-label="r360, startsida">
+            <img src="assets/r360.png" alt="r360 logo" width="150px" />
+          </a>
+
+          <nav class="site-nav" id="siteNav" aria-label="Huvudmeny">
+            <ul class="nav-list">
+              <li class="nav-has-menu" data-dropdown>
+                <button
+                  class="nav-trigger"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="navPlatform"
+                  data-dropdown-trigger
+                >
+                  Plattformen<span class="nav-caret" aria-hidden="true"></span>
+                </button>
+                <ul class="nav-menu" id="navPlatform" data-dropdown-menu>
+                  <li><a href="affarssystem.html">r360 Affärssystem</a></li>
+                  <li><a href="online.html">r360 Online</a></li>
+                  <li><a href="tillaggstjanster.html">Tilläggstjänster</a></li>
+                </ul>
+              </li>
+              <li><a href="#medlemmarna">Medlemmarna</a></li>
+              <li><a href="#om-oss">Om oss</a></li>
+              <li><a href="#partners">Partners</a></li>
+              <li><a href="#support">Support</a></li>
+            </ul>
+            <div class="nav-actions">
+              <a class="btn-r360 btn-r360--primary" href="#boka"
+                >Boka ett samtal</a
+              >
+              <div class="lang-switch" role="group" aria-label="Språk">
+                <button
+                  type="button"
+                  class="lang-option is-active"
+                  aria-pressed="true"
+                >
+                  SV
+                </button>
+                <button type="button" class="lang-option" aria-pressed="false">
+                  EN
+                </button>
+              </div>
+            </div>
+          </nav>
+
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="siteNav"
+          >
+            <span class="nav-toggle-bars" aria-hidden="true"
+              ><span></span><span></span
+            ></span>
+            <span class="visually-hidden">Öppna menyn</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container">
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-6">
+              <h1 class="hero-title">Hela upplevelsen.<br />En plattform.</h1>
+              <p class="hero-lead">
+                Logi, skipass, uthyrning, skidskola och aktiviteter i ett
+                system. En varukorg och en betalning för gästen — och ett
+                sällskap av anläggningar som redan löst det ni står inför.
+              </p>
+              <div class="hero-actions">
+                <a class="btn-r360 btn-r360--primary" href="#boka"
+                  >Boka ett samtal</a
+                >
+                <a class="link-arrow" href="#plattformen">Se plattformen</a>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="hero-visual">
+                <img
+                  class="hero-image"
+                  src="assets/booking.svg"
+                  alt="Illustration av en skidanläggning med backar, lift och byggnader"
+                  width="524"
+                  height="363"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Medlemsband -->
+      <section class="members" id="medlemmarna">
+        <div class="container">
+          <p class="members-year">Medlemmarna 2026</p>
+        </div>
+
+        <div class="members-track" data-marquee>
+          <ul class="members-list" data-marquee-list>
+            <li>Branäs</li>
+            <li>Stöten</li>
+            <li>Idre Fjäll</li>
+            <li>Kläppen</li>
+            <li>Ramundberget</li>
+            <li>Dundret</li>
+            <li>Orsa Grönklitt</li>
+            <li>Tänndalen</li>
+            <li>Järvsöbacken</li>
+            <li>Idre Himmelfjäll</li>
+            <li>Destination Järvsö</li>
+            <li>Fjätervålen</li>
+            <li>Säfsen</li>
+            <li>Kappruet</li>
+            <li>Hassela</li>
+            <li>Bygdsiljumsbacken</li>
+            <li>Kungsberget</li>
+            <li>Skeikampen</li>
+            <li>Slaatta</li>
+          </ul>
+        </div>
+
+        <div class="container">
+          <p class="members-note">
+            Tre av fyra bland Sveriges 15 största anläggningar.
+            <a class="link-arrow link-arrow--light" href="#medlemmar-alla"
+              >Se alla medlemmar</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <!-- Produktområden -->
+      <section class="section" id="plattformen">
+        <div class="container">
+          <h2 class="section-title">Allt gästen bokar.</h2>
+          <p class="mt-3">
+            Med r360s produkter kan ni effektivisera ert arbete, förbättra
+            försäljning och gästens upplevelse. Kika närmare på våra två
+            produkter och de moduler som hjälper er verksamhet – smart &
+            effektivt!
+          </p>
+
+          <div class="row g-4 mt-1">
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <img
+                  class="card-icon"
+                  src="assets/icon-house.svg"
+                  alt=""
+                  width="44"
+                  height="44"
+                />
+                <h3>Logi &amp; camping</h3>
+                <p>Stugor, hotell, camping och ägarlägenheter i samma flöde.</p>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <img
+                  class="card-icon"
+                  src="assets/icon-card.svg"
+                  alt=""
+                  width="44"
+                  height="44"
+                />
+                <h3>Skipass &amp; spårkort</h3>
+                <p>Sålda online och kopplade till gästens konto.</p>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <img
+                  class="card-icon"
+                  src="assets/icon-ski.svg"
+                  alt=""
+                  width="44"
+                  height="44"
+                />
+                <h3>Uthyrning</h3>
+                <p>
+                  Skidor, cyklar och utrustning, med koppling till
+                  Wintersteiger.
+                </p>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <img
+                  class="card-icon"
+                  src="assets/icon-flag.svg"
+                  alt=""
+                  width="44"
+                  height="44"
+                />
+                <h3>Skidskola &amp; aktiviteter</h3>
+                <p>Grupper, privatlektioner och upplevelser.</p>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <img
+                  class="card-icon"
+                  src="assets/icon-bag.svg"
+                  alt=""
+                  width="44"
+                  height="44"
+                />
+                <h3>Paket &amp; konferens</h3>
+                <p>Sammansatta produkter i en varukorg.</p>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <img
+                  class="card-icon"
+                  src="assets/icon-chart.svg"
+                  alt=""
+                  width="44"
+                  height="44"
+                />
+                <h3>Ekonomi</h3>
+                <p>Betalningar, kassor och redovisning i samma system.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="section-actions">
+            <a class="btn-r360 btn-r360--primary" href="affarssystem.html"
+              >r360 Affärssystem</a
+            >
+            <a class="btn-r360 btn-r360--copper" href="online.html"
+              >r360 Online</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Värde -->
+      <section class="section section--alt" id="om-oss">
+        <div class="container">
+          <div class="row gy-5">
+            <div class="col-lg-5">
+              <h2 class="section-title">
+                Byggd av anläggningar, för anläggningar.
+              </h2>
+              <p class="section-lead">
+                r360 ägs av sina medlemmar. Det som utvecklas är det som
+                anläggningarna faktiskt behöver i drift — inte en roadmap någon
+                annanstans ifrån.
+              </p>
+              <a class="link-arrow" href="#boka"
+                >Prata med oss om er anläggning</a
+              >
+            </div>
+
+            <div class="col-lg-6 offset-lg-1">
+              <dl class="fact-list">
+                <div class="fact">
+                  <dt>En gästprofil</dt>
+                  <dd>
+                    Bokningar, skipass och kort hör ihop, oavsett var de köptes.
+                  </dd>
+                </div>
+                <div class="fact">
+                  <dt>Ett kassaflöde</dt>
+                  <dd>
+                    Online, i receptionen och i liftkiosken — samma produkter
+                    och priser.
+                  </dd>
+                </div>
+                <div class="fact">
+                  <dt>Öppna integrationer</dt>
+                  <dd>
+                    Kopplingar till kassasystem, portaler och partners ni redan
+                    använder.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Året i tal -->
+      <section class="stats" id="aret-i-tal">
+        <div class="container">
+          <h2 class="stats-title">Året i tal.</h2>
+
+          <dl class="stat-grid">
+            <div class="stat">
+              <dt class="stat-value" data-count-to="30">30</dt>
+              <dd class="stat-label">År i drift</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat-value" data-count-to="564">564</dt>
+              <dd class="stat-label">Släpp senaste året</dd>
+            </div>
+            <div class="stat">
+              <dt class="stat-value" data-count-to="1870">1&nbsp;870</dt>
+              <dd class="stat-label">Ärenden lösta</dd>
+            </div>
+            <div class="stat">
+              <dt
+                class="stat-value"
+                data-count-to="1.8"
+                data-count-decimals="1"
+              >
+                1,8
+              </dt>
+              <dd class="stat-label">Mdkr bokat</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- Röst från en medlem -->
+      <section class="quote-band">
+        <div class="container">
+          <div class="row align-items-center gy-4">
+            <div class="col-sm-8 col-md-5 col-lg-4">
+              <img
+                class="quote-photo"
+                src="assets/person.jpg"
+                alt="Porträtt av en person i beige ullkappa och vit mössa i ett snöigt vinterlandskap"
+                width="1846"
+                height="2394"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <div class="col-md-7 col-lg-7 offset-lg-1">
+              <figure class="quote">
+                <blockquote class="quote-text">
+                  ”Vi har framför allt på senare år märkt en otrolig vilja och
+                  utvecklingstakt med stor insikt om våra behov som kund.”
+                </blockquote>
+                <figcaption class="quote-source">
+                  Lisa Flacké · HR · Ramundberget
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners -->
+      <section class="section" id="partners">
+        <div class="container">
+          <h2 class="section-title">Partners i plattformen.</h2>
+          <p class="section-lead section-lead--narrow">
+            Integrationer som redan är i drift hos medlemmarna.
+          </p>
+
+          <ul class="partner-grid">
+            <li>Wintersteiger</li>
+            <li>Skidata</li>
+            <li>Axess</li>
+            <li>Nets</li>
+            <li>Visma</li>
+            <li>Fortnox</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta" id="boka">
+        <div class="container">
+          <div class="row align-items-end gy-4">
+            <div class="col-lg-7">
+              <h2 class="cta-title">
+                Ta ett samtal med någon som driver samma sak.
+              </h2>
+              <p class="cta-lead">
+                Trettio minuter, ingen presentation. Berätta hur ni säljer i dag
+                så visar vi hur det ser ut i r360.
+              </p>
+            </div>
+            <div class="col-lg-4 offset-lg-1">
+              <a
+                class="btn-r360 btn-r360--copper btn-r360--block"
+                href="#kontakt"
+                >Boka ett samtal</a
+              >
+              <p class="cta-meta">
+                Eller mejla <a href="mailto:hej@r360.se">hej@r360.se</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="support">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <a class="brand brand--footer" href="#">
+              <img src="assets/r360.png" alt="r360" width="150px" />
+            </a>
+            <p class="footer-note">
+              Bokningsplattformen för nordiska destinationer.
+            </p>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <h2 class="footer-heading">Plattformen</h2>
+            <ul class="footer-list">
+              <li><a href="#plattformen">Översikt</a></li>
+              <li><a href="#plattformen">Logi</a></li>
+              <li><a href="#plattformen">Skipass</a></li>
+              <li><a href="#plattformen">Uthyrning</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-lg-2">
+            <h2 class="footer-heading">Bolaget</h2>
+            <ul class="footer-list">
+              <li><a href="#medlemmarna">Medlemmar</a></li>
+              <li><a href="#partners">Partners</a></li>
+              <li><a href="#om-oss">Om oss</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 offset-lg-1">
+            <h2 class="footer-heading">Support</h2>
+            <ul class="footer-list">
+              <li><a href="#support">Hjälpcenter</a></li>
+              <li><a href="mailto:support@r360.se">support@r360.se</a></li>
+              <li><a href="tel:+46101234567">010-123 45 67</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 r360 AB</p>
+          <ul class="footer-legal">
+            <li><a href="#">Integritet</a></li>
+            <li><a href="#">Villkor</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

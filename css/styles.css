@@ -484,7 +484,10 @@ a:hover { color: var(--marin); }
 
 .section-title {
   font-size: var(--t-2xl);
-  max-width: 18ch;
+  /* Rubrikerna är korta — taket ska hindra sidbreda rader, inte tvinga
+     tjugosex tecken att brytas mitt itu. */
+  max-width: 28ch;
+  text-wrap: balance;
 }
 
 .section-lead {
@@ -634,7 +637,8 @@ a:hover { color: var(--marin); }
 }
 .page-title {
   font-size: var(--t-3xl);
-  max-width: 20ch;
+  max-width: 24ch;
+  text-wrap: balance;
 }
 .page-image {
   display: block;

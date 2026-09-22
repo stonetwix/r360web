@@ -569,30 +569,60 @@ a:hover { color: var(--marin); }
   text-transform: uppercase;
   margin-bottom: 1.5rem;
 }
-.partner-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  margin-top: 3rem;
-  background: var(--line);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
+/* Partnerlapparna: små kort som ligger utströdda i stället för i ett rutnät.
+   Lutningen är lånad från nyhetslapparna — samma anslagstavla. */
+.partner-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.15rem 1.25rem;
+  margin-top: clamp(2.75rem, 5vw, 3.5rem);
 }
-@media (min-width: 576px) { .partner-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-@media (min-width: 992px) { .partner-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); } }
 
-.partner-grid li {
+.partner-chip {
   display: grid;
-  place-items: center;
-  min-height: 96px;
-  padding: 1rem;
-  background: var(--paper);
-  color: var(--slate);
-  font-size: var(--t-sm);
+  gap: .3rem;
+  padding: 1rem 1.6rem 1.1rem;
+  background: var(--limestone);
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 24px -22px rgba(13, 62, 96, .55);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.partner-chip:nth-child(3n + 1) { transform: rotate(-1.4deg); }
+.partner-chip:nth-child(3n + 2) { transform: rotate(1.1deg); }
+.partner-chip:nth-child(3n + 3) { transform: rotate(-.5deg); }
+
+.partner-chip:hover {
+  transform: rotate(0) translateY(-4px);
+  border-color: var(--line);
+  box-shadow: 0 18px 30px -20px rgba(13, 62, 96, .5);
+}
+
+/* Liten kopparprick före etiketten, som en knäppnal på lappen. */
+.partner-chip-tag {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  color: var(--copper);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.partner-chip-tag::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.partner-chip-name {
+  font-family: var(--serif);
+  font-size: var(--t-lg);
   font-weight: 500;
-  letter-spacing: .01em;
-  text-align: center;
+  letter-spacing: -0.005em;
+  line-height: 1.15;
 }
 
 /* ---------- 9. Undersidor: sidhuvud & moduler ---------- */
@@ -1365,6 +1395,8 @@ a:hover { color: var(--marin); }
   .news-card { transform: none; }
   .news-card:hover,
   .news-card:focus-within { transform: none; }
+  .partner-chip,
+  .partner-chip:hover { transform: none; }
   .members-track {
     overflow-x: auto;
     -webkit-mask-image: none;

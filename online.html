@@ -176,7 +176,9 @@
                 Två eller tre rader ingress som sammanfattar nyheten. Byt ut
                 mot er egen text.
               </p>
-              <a class="link-arrow" href="#">Läs mer</a>
+              <a class="link-arrow" href="#nyhet-2026-09-18" data-news-open
+                >Läs mer</a
+              >
             </article>
 
             <article class="news-card">
@@ -188,7 +190,9 @@
                 Här ligger nyheten som kom innan den senaste. Samma upplägg:
                 datum, rubrik och en kort ingress.
               </p>
-              <a class="link-arrow" href="#">Läs mer</a>
+              <a class="link-arrow" href="#nyhet-2026-09-02" data-news-open
+                >Läs mer</a
+              >
             </article>
 
             <article class="news-card">
@@ -200,9 +204,124 @@
                 Tre kort räcker på sidan. Äldre nyheter kan flyttas till en
                 egen sida när de blir fler.
               </p>
-              <a class="link-arrow" href="#">Läs mer</a>
+              <a class="link-arrow" href="#nyhet-2026-08-14" data-news-open
+                >Läs mer</a
+              >
             </article>
           </div>
+
+          <!-- En ruta per nyhet. Öppnas av kortets "Läs mer"
+               och kan länkas direkt med #nyhet-<datum>. -->
+          <dialog
+            class="news-dialog"
+            id="nyhet-2026-09-18"
+            data-news-dialog
+            aria-labelledby="nyhet-2026-09-18-rubrik"
+          >
+            <div class="news-dialog-body">
+              <div class="news-dialog-head">
+                <p class="news-date">
+                  <time datetime="2026-09-18">18 september 2026</time>
+                </p>
+                <form method="dialog">
+                  <button class="news-dialog-close" type="submit">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="visually-hidden">Stäng</span>
+                  </button>
+                </form>
+              </div>
+
+              <h3 class="news-dialog-title" id="nyhet-2026-09-18-rubrik">Rubrik på nyheten</h3>
+
+              <!-- Bildplats. Byt ut mot:
+                   <img class="news-dialog-image" src="assets/..." alt="..."
+                        width="1600" height="900" loading="lazy" /> -->
+              <div class="news-dialog-image news-dialog-image--tom"></div>
+
+              <p class="news-dialog-text">
+                Hela nyheten i brödtext. Platshållare — skriv in den riktiga
+                texten här, gärna i två till fyra stycken.
+              </p>
+              <p class="news-dialog-text">
+                Ett andra stycke med detaljer, t.ex. vad som ändras för er som
+                använder r360 och när det släpps.
+              </p>
+            </div>
+          </dialog>
+
+          <dialog
+            class="news-dialog"
+            id="nyhet-2026-09-02"
+            data-news-dialog
+            aria-labelledby="nyhet-2026-09-02-rubrik"
+          >
+            <div class="news-dialog-body">
+              <div class="news-dialog-head">
+                <p class="news-date">
+                  <time datetime="2026-09-02">2 september 2026</time>
+                </p>
+                <form method="dialog">
+                  <button class="news-dialog-close" type="submit">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="visually-hidden">Stäng</span>
+                  </button>
+                </form>
+              </div>
+
+              <h3 class="news-dialog-title" id="nyhet-2026-09-02-rubrik">Nästa nyhet</h3>
+
+              <!-- Bildplats. Byt ut mot:
+                   <img class="news-dialog-image" src="assets/..." alt="..."
+                        width="1600" height="900" loading="lazy" /> -->
+              <div class="news-dialog-image news-dialog-image--tom"></div>
+
+              <p class="news-dialog-text">
+                Hela nyheten i brödtext. Platshållare — skriv in den riktiga
+                texten här, gärna i två till fyra stycken.
+              </p>
+              <p class="news-dialog-text">
+                Ett andra stycke med detaljer, t.ex. vad som ändras för er som
+                använder r360 och när det släpps.
+              </p>
+            </div>
+          </dialog>
+
+          <dialog
+            class="news-dialog"
+            id="nyhet-2026-08-14"
+            data-news-dialog
+            aria-labelledby="nyhet-2026-08-14-rubrik"
+          >
+            <div class="news-dialog-body">
+              <div class="news-dialog-head">
+                <p class="news-date">
+                  <time datetime="2026-08-14">14 augusti 2026</time>
+                </p>
+                <form method="dialog">
+                  <button class="news-dialog-close" type="submit">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="visually-hidden">Stäng</span>
+                  </button>
+                </form>
+              </div>
+
+              <h3 class="news-dialog-title" id="nyhet-2026-08-14-rubrik">Äldre nyhet</h3>
+
+              <!-- Bildplats. Byt ut mot:
+                   <img class="news-dialog-image" src="assets/..." alt="..."
+                        width="1600" height="900" loading="lazy" /> -->
+              <div class="news-dialog-image news-dialog-image--tom"></div>
+
+              <p class="news-dialog-text">
+                Hela nyheten i brödtext. Platshållare — skriv in den riktiga
+                texten här, gärna i två till fyra stycken.
+              </p>
+              <p class="news-dialog-text">
+                Ett andra stycke med detaljer, t.ex. vad som ändras för er som
+                använder r360 och när det släpps.
+              </p>
+            </div>
+          </dialog>
         </div>
       </section>
 

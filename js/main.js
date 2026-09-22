@@ -168,6 +168,54 @@
     });
   }
 
+  /* --- Nyhetsrutor --- */
+  var newsLinks = Array.prototype.slice.call(
+    document.querySelectorAll('[data-news-open]')
+  );
+
+  if (newsLinks.length && typeof HTMLDialogElement !== 'undefined') {
+    // Hashen speglar den öppna rutan, så en enskild nyhet går att länka till.
+    var setHash = function (hash) {
+      var url = hash ? '#' + hash : window.location.pathname + window.location.search;
+      window.history.replaceState(null, '', url);
+    };
+
+    var openNews = function (dialog) {
+      if (!dialog || dialog.open) return;
+      dialog.showModal();
+      setHash(dialog.id);
+    };
+
+    newsLinks.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        var dialog = document.getElementById(
+          (link.getAttribute('href') || '').slice(1)
+        );
+        if (!dialog || typeof dialog.showModal !== 'function') return;
+
+        event.preventDefault();
+        openNews(dialog);
+      });
+    });
+
+    document.querySelectorAll('[data-news-dialog]').forEach(function (dialog) {
+      // Klick på bakgrunden träffar själva dialogen, inte innehållet.
+      dialog.addEventListener('click', function (event) {
+        if (event.target === dialog) dialog.close();
+      });
+
+      dialog.addEventListener('close', function () {
+        if (window.location.hash === '#' + dialog.id) setHash(null);
+      });
+    });
+
+    // En delad länk öppnar sin ruta direkt.
+    if (window.location.hash) {
+      var fromHash = document.getElementById(window.location.hash.slice(1));
+      if (fromHash && fromHash.hasAttribute('data-news-dialog')) openNews(fromHash);
+    }
+  }
+
   /* --- Citatkarusell --- */
   document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
     var slides = Array.prototype.slice.call(

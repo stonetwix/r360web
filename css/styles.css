@@ -995,6 +995,76 @@ a:hover { color: var(--marin); }
   font-size: var(--t-sm);
 }
 
+/* Nyhetsrutan: hela nyheten i en <dialog> ovanpå sidan. */
+.news-dialog {
+  width: min(680px, calc(100vw - 2rem));
+  max-height: calc(100vh - 4rem);
+  padding: 0;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  color: var(--marin);
+  box-shadow: 0 32px 60px -30px rgba(9, 46, 72, .6);
+}
+.news-dialog::backdrop { background: rgba(9, 46, 72, .55); }
+/* Utan skript följer länken hashen och rutan visas som ett vanligt block. */
+.news-dialog:target { display: block; }
+
+.news-dialog-body { padding: clamp(1.5rem, 4vw, 2.25rem); }
+
+.news-dialog-head {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.news-dialog-close {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  margin: -.35rem -.35rem 0 0;
+  padding: 0;
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  color: var(--slate);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color .18s ease, color .18s ease;
+}
+.news-dialog-close:hover { border-color: var(--line); color: var(--marin); }
+
+.news-dialog-title {
+  margin-top: .65rem;
+  font-family: var(--sans);
+  font-size: var(--t-lg);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.25;
+}
+
+.news-dialog-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+  border-radius: var(--radius);
+}
+/* Platshållare tills nyheten har en egen bild. */
+.news-dialog-image--tom {
+  aspect-ratio: 16 / 9;
+  background: var(--limestone);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.news-dialog-text {
+  margin-top: 1.25rem;
+  font-size: var(--t-sm);
+  line-height: 1.65;
+}
+
 /* ---------- 10. Stats & quote ---------- */
 .stats {
   padding: clamp(3rem, 6vw, 4.25rem) 0;

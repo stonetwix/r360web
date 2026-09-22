@@ -257,68 +257,11 @@
         <div class="container">
           <h2 class="section-title">Produktportföjen.</h2>
 
-          <div class="panel-grid">
-            <article class="panel">
-              <div class="panel-media">
-                <img
-                  src="assets/agent.png"
-                  alt=""
-                  width="556"
-                  height="556"
-                  loading="lazy"
-                />
-              </div>
-              <div class="panel-body">
-                <h3 class="panel-title">Agentbokning</h3>
-                <p class="panel-text">
-                  I r360 kan en agent arbeta på två olika sätt. Antingen via en
-                  egen integration via vårt API eller i vår agentportal. När en
-                  bokning görs via portalen går den direkt in till
-                  affärssystemet.
-                </p>
-              </div>
-            </article>
-
-            <article class="panel">
-              <div class="panel-media">
-                <img
-                  src="assets/agare.png"
-                  alt=""
-                  width="556"
-                  height="556"
-                  loading="lazy"
-                />
-              </div>
-              <div class="panel-body">
-                <h3 class="panel-title">Ägarbokning</h3>
-                <p class="panel-text">
-                  I ägarportalen kan era stugägare boka sin egen stuga samt se
-                  underlag för gästbokningar och kommande utbetalningar.
-                </p>
-              </div>
-            </article>
-
-            <article class="panel">
-              <div class="panel-media">
-                <img
-                  src="assets/admin.png"
-                  alt=""
-                  width="556"
-                  height="556"
-                  loading="lazy"
-                />
-              </div>
-              <div class="panel-body">
-                <h3 class="panel-title">Adminmodulen</h3>
-                <p class="panel-text">
-                  I adminmodulen kan ni anpassa de olika onlineprodukternas
-                  flöde för att få ett flöde som passar er och er anläggning.
-                </p>
-              </div>
-            </article>
-
-            <article class="panel panel--wide">
-              <div class="panel-media">
+          <!-- Produkterna som kort, samma uppsättning som modulerna på
+               affärssystemsidan. Den första går över hela bredden. -->
+          <div class="modules modules--no-divider">
+            <article class="module">
+              <div class="module-figure">
                 <img
                   src="assets/stadofast.png"
                   alt=""
@@ -327,19 +270,89 @@
                   loading="lazy"
                 />
               </div>
-              <div class="panel-body">
-                <h3 class="panel-title">Städ &amp; Fastighet</h3>
-                <p class="panel-text">
-                  Med hjälp av denna modul kan fastighet eller städ
-                  städrapportera och markera en enhet direkt i r360 för
-                  automatisk incheckning. Modulen ger er även en totalöversikt
-                  över ankomst-/avreseläget på anläggningen.
+              <div class="module-body">
+                <div class="module-head">
+                  <p class="module-index">01</p>
+                  <h3 class="module-title">Städ &amp; Fastighet</h3>
+                </div>
+                <p class="module-text">
+                  Med hjälp av denna modul kan fastighet eller städ städrapportera
+                  och markera en enhet direkt i r360 för automatisk incheckning.
+                  Modulen ger er även en totalöversikt över ankomst-/avreseläget på
+                  anläggningen.
                 </p>
               </div>
             </article>
 
-            <article class="panel panel--wide">
-              <div class="panel-media">
+            <article class="module">
+              <div class="module-figure">
+                <img
+                  src="assets/agent.png"
+                  alt=""
+                  width="556"
+                  height="556"
+                  loading="lazy"
+                />
+              </div>
+              <div class="module-body">
+                <div class="module-head">
+                  <p class="module-index">02</p>
+                  <h3 class="module-title">Agentbokning</h3>
+                </div>
+                <p class="module-text">
+                  I r360 kan en agent arbeta på två olika sätt. Antingen via en egen
+                  integration via vårt API eller i vår agentportal. När en bokning
+                  görs via portalen går den direkt in till affärssystemet.
+                </p>
+              </div>
+            </article>
+
+            <article class="module">
+              <div class="module-figure">
+                <img
+                  src="assets/agare.png"
+                  alt=""
+                  width="556"
+                  height="556"
+                  loading="lazy"
+                />
+              </div>
+              <div class="module-body">
+                <div class="module-head">
+                  <p class="module-index">03</p>
+                  <h3 class="module-title">Ägarbokning</h3>
+                </div>
+                <p class="module-text">
+                  I ägarportalen kan era stugägare boka sin egen stuga samt se
+                  underlag för gästbokningar och kommande utbetalningar.
+                </p>
+              </div>
+            </article>
+
+            <article class="module">
+              <div class="module-figure">
+                <img
+                  src="assets/admin.png"
+                  alt=""
+                  width="556"
+                  height="556"
+                  loading="lazy"
+                />
+              </div>
+              <div class="module-body">
+                <div class="module-head">
+                  <p class="module-index">04</p>
+                  <h3 class="module-title">Adminmodulen</h3>
+                </div>
+                <p class="module-text">
+                  I adminmodulen kan ni anpassa de olika onlineprodukternas flöde
+                  för att få ett flöde som passar er och er anläggning.
+                </p>
+              </div>
+            </article>
+
+            <article class="module">
+              <div class="module-figure">
                 <img
                   src="assets/minresa.png"
                   alt=""
@@ -348,16 +361,19 @@
                   loading="lazy"
                 />
               </div>
-              <div class="panel-body">
-                <h3 class="panel-title">Min Resa &amp; Min Biljett</h3>
-                <p class="panel-text">
-                  Via min resa kan era besökare som bor i ett boende med
-                  digitalt anslutet lås själva hantera in-/och utcheckning samt
-                  ta del av vald information från er.
+              <div class="module-body">
+                <div class="module-head">
+                  <p class="module-index">05</p>
+                  <h3 class="module-title">Min Resa &amp; Min Biljett</h3>
+                </div>
+                <p class="module-text">
+                  Via min resa kan era besökare som bor i ett boende med digitalt
+                  anslutet lås själva hantera in-/och utcheckning samt ta del av
+                  vald information från er.
                 </p>
-                <p class="panel-text">
-                  Via mina biljetter kan era besökare istället hämta ut
-                  förbokade skipass via en QR-kod i era automater.
+                <p class="module-text">
+                  Via mina biljetter kan era besökare istället hämta ut förbokade
+                  skipass via en QR-kod i era automater.
                 </p>
               </div>
             </article>

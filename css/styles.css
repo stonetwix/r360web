@@ -480,6 +480,7 @@ a:hover { color: var(--marin); }
   background: var(--limestone);
 }
 .section--tight-top { padding-top: clamp(2.5rem, 5vw, 4rem); }
+.section--tight-bottom { padding-bottom: clamp(.5rem, 1.5vw, 1rem); }
 
 .section-title {
   font-size: var(--t-2xl);
@@ -649,63 +650,70 @@ a:hover { color: var(--marin); }
   line-height: 1.55;
 }
 
+/* Modulerna: lika stora kort i två spalter i stället för breda rader.
+   Bilden ligger till vänster om numret, rubriken och texten. */
 .modules {
-  margin-top: clamp(3rem, 6vw, 4.5rem);
-  /* Avslutande linje efter sista modulen, lika bred som linjerna mellan dem. */
+  display: grid;
+  gap: 1.25rem;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  /* Avslutande linje mellan sista kortet och nästa sektion. */
   padding-bottom: clamp(2.5rem, 5vw, 4rem);
   border-bottom: 1px solid var(--line);
+}
+/* Följer ett färgat band direkt efter behövs ingen linje — kanten syns ändå. */
+.modules--no-divider {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+@media (min-width: 768px) {
+  .modules { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 /* Ligger modulerna först i sektionen finns ingen rubrik att få luft från. */
 .modules:first-child { margin-top: 0; }
 
 .module {
   display: grid;
-  align-items: center;
-  gap: 2rem;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background: var(--limestone);
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  transition: border-color .18s ease, transform .18s ease;
 }
-.module + .module {
-  margin-top: clamp(2.5rem, 5vw, 4rem);
-  padding-top: clamp(2.5rem, 5vw, 4rem);
-  border-top: 1px solid var(--line);
-}
-
-@media (min-width: 768px) {
-  .module {
-    grid-template-columns: 4fr 7fr;
-    gap: clamp(2rem, 5vw, 4.5rem);
-  }
-  /* Varannan rad speglas så sidan får en rytm i stället för en kolumn.
-     Spalterna byter plats med bilden så den smala alltid följer bilden. */
-  .module:nth-child(even) { grid-template-columns: 7fr 4fr; }
-  .module:nth-child(even) .module-figure { order: 2; }
+.module:hover {
+  border-color: var(--line);
+  transform: translateY(-3px);
 }
 
-/* Illustrationerna har egen bakgrund och går kant i kant i rutan. */
+/* Illustrationen är nu en liten bricka i stället för ett halvt sidbrett fält. */
 .module-figure img {
   display: block;
-  width: 100%;
-  max-width: 556px;
-  height: auto;
-  border-radius: var(--radius-lg);
+  width: 112px;
+  height: 112px;
+  border-radius: var(--radius);
+  background: var(--paper);
 }
+.module-head { margin-bottom: .65rem; }
 
 .module-index {
   font-family: var(--serif);
-  font-size: var(--t-md);
+  font-size: var(--t-sm);
   color: var(--copper);
-  letter-spacing: .06em;
+  letter-spacing: .12em;
 }
 .module-title {
-  margin-top: .35rem;
+  margin-top: .15rem;
   font-family: var(--sans);
-  font-size: var(--t-lg);
+  font-size: var(--t-md);
   font-weight: 600;
   letter-spacing: -0.005em;
   line-height: 1.25;
 }
 .module-text {
-  margin-top: 1rem;
-  max-width: 48ch;
+  max-width: 52ch;
+  font-size: var(--t-sm);
   line-height: 1.6;
 }
 
@@ -747,44 +755,6 @@ a:hover { color: var(--marin); }
   max-width: 380px;
   height: auto;
   border-radius: var(--radius-lg);
-}
-
-/* Modulerna: liten illustration, ingen ram — luften får bära layouten. */
-.panel-grid {
-  display: grid;
-  gap: clamp(2.75rem, 5vw, 4rem) clamp(2rem, 4vw, 3.25rem);
-  margin-top: clamp(3rem, 6vw, 4.5rem);
-}
-@media (min-width: 576px) {
-  .panel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-/* Sex spalter: de korta texterna tar två var (tre på raden),
-   de långa tar tre var (två på raden). */
-@media (min-width: 992px) {
-  .panel-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-  .panel { grid-column: span 2; }
-  .panel--wide { grid-column: span 3; }
-}
-
-.panel-media img {
-  display: block;
-  width: 160px;
-  height: 160px;
-  border-radius: var(--radius);
-}
-
-.panel-title {
-  margin-top: 1.5rem;
-  font-family: var(--sans);
-  font-size: var(--t-md);
-  font-weight: 600;
-  letter-spacing: -0.005em;
-  line-height: 1.3;
-}
-.panel-text {
-  margin-top: .85rem;
-  font-size: var(--t-sm);
-  line-height: 1.6;
 }
 
 /* Nyheter: lappar på en anslagstavla */
@@ -1406,6 +1376,7 @@ a:hover { color: var(--marin); }
   .news-card:focus-within { transform: none; }
   .partner-chip,
   .partner-chip:hover { transform: none; }
+  .module:hover { transform: none; }
   .members-track {
     overflow-x: auto;
     -webkit-mask-image: none;

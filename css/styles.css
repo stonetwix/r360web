@@ -732,6 +732,15 @@ a:hover { color: var(--marin); }
   font-size: var(--t-sm);
 }
 
+/* Kartan: illustrationen är genomskinlig, så den behöver en egen yta att
+   ligga på. Hela bilden är en länk till Google Maps. */
+.map-link { display: block; }
+.map-image {
+  background: var(--limestone);
+  transition: border-color .18s ease;
+}
+.map-link:hover .map-image { border-color: var(--copper); }
+
 .feature-image {
   display: block;
   width: 100%;

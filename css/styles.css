@@ -166,6 +166,13 @@ a:hover { color: var(--marin); }
 }
 .nav-list a:hover { border-bottom-color: var(--copper); color: var(--marin); }
 
+/* Aktiv sida: samma streck som vid hover, men kvar hela tiden. */
+.nav-list > li > a[aria-current="page"] { border-bottom-color: var(--copper); }
+/* Ligger den aktiva sidan i en undermeny stryks menyns knapp under. */
+.nav-has-menu:has([aria-current="page"]) .nav-trigger {
+  border-bottom-color: var(--copper);
+}
+
 .nav-has-menu { position: relative; }
 
 .nav-trigger {
@@ -548,6 +555,19 @@ a:hover { color: var(--marin); }
   max-width: 52ch;
 }
 
+/* Liten etikett över varje grupp av kort (partners, medlemmar). */
+.group-title {
+  margin-top: clamp(3rem, 6vw, 4.25rem);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--slate);
+  font-family: var(--sans);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
 .partner-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -823,6 +843,144 @@ a:hover { color: var(--marin); }
 }
 .news-text + .link-arrow { margin-top: 1.25rem; }
 
+/* ---------- 9b. Teamsidan: tidslinje, namnlista, förmåner ---------- */
+/* Tidslinjen: varje nedslag hänger under en egen linje med en prick på. */
+.timeline {
+  display: grid;
+  gap: 2.5rem;
+  margin: clamp(2.5rem, 5vw, 3.5rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 768px) {
+  .timeline {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(2rem, 4vw, 3rem);
+  }
+}
+
+.timeline-item {
+  position: relative;
+  padding-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--copper);
+}
+/* På den ljusa sektionen är bakgrunden kalksten, annars papper. */
+.section--alt .timeline-item::before { background: var(--limestone); }
+
+.timeline-year {
+  font-family: var(--serif);
+  font-size: var(--t-xl);
+  line-height: 1;
+  color: var(--copper);
+}
+.timeline-text {
+  margin-top: .9rem;
+  max-width: 36ch;
+  font-size: var(--t-sm);
+  line-height: 1.6;
+}
+
+/* Teamkorten: porträttet ligger utanför kortets överkant och bärs av en
+   ring i sidans egen bakgrundsfärg, så det ser ut att ligga ovanpå. */
+.roster {
+  display: grid;
+  gap: clamp(3.5rem, 6vw, 4.5rem) clamp(1.25rem, 2.5vw, 1.75rem);
+  /* Luft ovanför första radens bilder, som hänger upp över kortkanten. */
+  margin: clamp(3.25rem, 5vw, 4rem) 0 0;
+}
+@media (min-width: 576px) {
+  .roster { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 768px) {
+  .roster { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 1100px) {
+  .roster { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.roster li {
+  position: relative;
+  padding: 5rem 1.25rem 1.75rem;
+  background: var(--limestone);
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: transform .18s ease, border-color .18s ease;
+}
+.roster li:hover {
+  transform: translateY(-4px);
+  border-color: var(--line);
+}
+
+/* Porträtten är tagna med huvudet högt i rutan, därav object-position. */
+.roster-photo {
+  position: absolute;
+  top: -2.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 112px;
+  height: 112px;
+  border: 5px solid var(--paper);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 16%;
+  background: var(--limestone);
+}
+/* Platshållare tills porträttet finns — håller kortets rytm. */
+.roster-photo--tom {
+  box-shadow: inset 0 0 0 1px var(--line);
+  background: var(--paper);
+}
+
+.roster-name {
+  display: block;
+  font-family: var(--serif);
+  font-size: var(--t-md);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  line-height: 1.2;
+}
+.roster-role {
+  display: block;
+  margin-top: .35rem;
+  color: var(--slate);
+  font-size: var(--t-xs);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.roster-tel {
+  display: inline-block;
+  margin-top: .5rem;
+  font-size: var(--t-xs);
+}
+
+
+/* Förmånerna: korta etiketter som brickor i stället för punktlista. */
+.perk-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin-top: 1.5rem;
+}
+.perk-list li {
+  padding: .55rem 1rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: var(--t-sm);
+}
+
 /* ---------- 10. Stats & quote ---------- */
 .stats {
   padding: clamp(3rem, 6vw, 4.25rem) 0;
@@ -891,6 +1049,106 @@ a:hover { color: var(--marin); }
   color: var(--slate);
   font-size: var(--t-sm);
 }
+
+/* Citatkarusell: alla slides ligger i samma rutnätscell, så bandet håller
+   höjden av det längsta citatet och inget hoppar vid bytet. */
+.quote-carousel {
+  /* Avståndet en slide glider. Byts tecken när man backar i karusellen. */
+  --quote-shift: 40px;
+}
+.quote-carousel.is-reverse { --quote-shift: -40px; }
+
+.quote-track {
+  display: grid;
+  overflow: hidden;
+}
+
+/* Sliden som väntar står på den sida man är på väg ifrån, den som lämnar
+   går ut åt andra hållet — så citaten byts av i samma riktning. */
+.quote-slide {
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(var(--quote-shift));
+  transition: opacity .5s ease, transform .5s cubic-bezier(.22, .61, .36, 1),
+    visibility .5s;
+}
+.quote-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+.quote-slide.is-leaving {
+  visibility: visible;
+  transform: translateX(calc(var(--quote-shift) * -1));
+}
+
+/* Bilden och citatet kommer in strax efter varandra i stället för i ett
+   block — det är rörelsen som gör att bytet känns som ett byte. */
+.quote-slide .quote-photo,
+.quote-slide .quote {
+  transition: opacity .5s ease, transform .5s cubic-bezier(.22, .61, .36, 1);
+}
+.quote-slide:not(.is-active) .quote-photo,
+.quote-slide:not(.is-active) .quote {
+  opacity: 0;
+  transform: translateY(14px);
+}
+.quote-slide.is-active .quote-photo { transition-delay: .06s; }
+.quote-slide.is-active .quote { transition-delay: .14s; }
+
+.quote-controls {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-top: 2.5rem;
+}
+
+.quote-arrow {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--marin);
+  cursor: pointer;
+  transition: border-color .18s ease, color .18s ease;
+}
+.quote-arrow:hover { border-color: var(--copper); color: var(--copper); }
+
+/* Pilen är samma vinkelhake som menyns caret, vriden åt sidan. */
+.quote-arrow-icon {
+  width: 7px;
+  height: 7px;
+  border-left: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateX(1px) rotate(45deg);
+}
+.quote-arrow--next .quote-arrow-icon {
+  transform: translateX(-1px) rotate(-135deg);
+}
+
+.quote-dots {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  margin-left: .75rem;
+}
+.quote-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  background: var(--line);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color .18s ease;
+}
+.quote-dot:hover { background: var(--slate); }
+.quote-dot[aria-current="true"] { background: var(--copper); }
 
 /* ---------- 11. CTA ---------- */
 .cta {

@@ -168,6 +168,86 @@
     });
   }
 
+  /* --- Citatkarusell --- */
+  document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
+    var slides = Array.prototype.slice.call(
+      carousel.querySelectorAll('[data-carousel-slide]')
+    );
+    var dots = Array.prototype.slice.call(
+      carousel.querySelectorAll('[data-carousel-dot]')
+    );
+    if (slides.length < 2) return;
+
+    var index = 0;
+    var timer = null;
+    var leavingTimer = null;
+
+    // back styr åt vilket håll citaten glider.
+    var show = function (next, back) {
+      var previous = index;
+      index = (next + slides.length) % slides.length;
+
+      carousel.classList.toggle('is-reverse', !!back);
+
+      slides.forEach(function (slide, i) {
+        slide.classList.remove('is-leaving');
+        slide.classList.toggle('is-active', i === index);
+        slide.setAttribute('aria-hidden', String(i !== index));
+      });
+      dots.forEach(function (dot, i) {
+        dot.setAttribute('aria-current', String(i === index));
+      });
+
+      if (previous === index || reduceMotion) return;
+
+      // Sliden som lämnar ligger kvar tills den glidit ut, sedan ställs den
+      // tillbaka på väntande plats.
+      var leaving = slides[previous];
+      leaving.classList.add('is-leaving');
+
+      window.clearTimeout(leavingTimer);
+      leavingTimer = window.setTimeout(function () {
+        leaving.classList.remove('is-leaving');
+      }, 500);
+    };
+
+    // Autospelet står stilla för den som valt mindre rörelse.
+    var stop = function () {
+      window.clearInterval(timer);
+      timer = null;
+    };
+    var start = function () {
+      if (reduceMotion || timer) return;
+      timer = window.setInterval(function () { show(index + 1); }, 7000);
+    };
+    // Byter besökaren själv börjar intervallet om från noll.
+    var go = function (next, back) {
+      show(next, back);
+      stop();
+      start();
+    };
+
+    var prev = carousel.querySelector('[data-carousel-prev]');
+    var next = carousel.querySelector('[data-carousel-next]');
+    if (prev) prev.addEventListener('click', function () { go(index - 1, true); });
+    if (next) next.addEventListener('click', function () { go(index + 1); });
+
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () { go(i, i < index); });
+    });
+
+    carousel.addEventListener('mouseenter', stop);
+    carousel.addEventListener('mouseleave', start);
+    carousel.addEventListener('focusin', stop);
+    carousel.addEventListener('focusout', function (event) {
+      if (carousel.contains(event.relatedTarget)) return;
+      start();
+    });
+
+    show(0);
+    start();
+  });
+
   /* --- Språkväxling (placeholder tills sidorna finns) --- */
   document.querySelectorAll('.lang-switch').forEach(function (group) {
     group.addEventListener('click', function (event) {

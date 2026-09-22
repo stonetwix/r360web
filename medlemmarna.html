@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>r360 | Partners</title>
-    <meta name="description" content="Integrationer och samarbeten som redan är i drift hos medlemmarna." />
+    <title>r360 | Medlemmarna</title>
+    <meta
+      name="description"
+      content="Anläggningarna som äger och använder r360 — mer än 20 i Sverige och Norge."
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -53,8 +56,10 @@
                   </li>
                 </ul>
               </li>
-              <li><a href="medlemmarna.html">Medlemmarna</a></li>
-              <li><a href="partners.html" aria-current="page">Partners</a></li>
+              <li>
+                <a href="medlemmarna.html" aria-current="page">Medlemmarna</a>
+              </li>
+              <li><a href="partners.html">Partners</a></li>
               <li class="nav-has-menu" data-dropdown>
                 <button
                   class="nav-trigger"
@@ -126,12 +131,11 @@
         <div class="container">
           <div class="row align-items-center gy-4">
             <div class="col-lg-7">
-              <h1 class="page-title">Partners.</h1>
+              <h1 class="page-title">Medlemmarna.</h1>
               <p class="page-lead">
-                Under åren har vi utvecklat ett samarbete med flera
-                marknadsledande leverantörer som på ett eller flera sätt
-                kompletterar vårt affärssystem. Vi har därmed möjlighet att
-                erbjuda våra kunder en komplett tjänst för deras verksamhet!
+                r360 används idag på mer än 20 anläggningar i Sverige och Norge.
+                Att vår pilotkund som installerade vårt affärssystem 1997 finns
+                kvar ser vi som ett gott betyg.
               </p>
             </div>
 
@@ -139,8 +143,8 @@
               <div class="hero-visual">
                 <img
                   class="page-image"
-                  src="assets/partners.png"
-                  alt="r360 i mitten med partnernas system kopplade runt omkring."
+                  src="assets/medlemmar.png"
+                  alt="Kartnålar på fjälltoppar, där anläggningen från 1997 är utpekad."
                   width="1200"
                   height="1200"
                 />
@@ -150,339 +154,484 @@
         </div>
       </section>
 
-      <!-- Partners, grupperade efter vad de kompletterar plattformen med.
-           Ett kort = <article class="card-r360"> med namn, en rad om vad de
-           gör och en länk till deras webbplats. Ingen logotyp på korten. -->
-      <section class="section" id="partners">
+      <!-- Röster från medlemmarna.
+           En slide = <article class="quote-slide"> med bild, citat och källa.
+           Fler citat: kopiera en slide och lägg till en prick i .quote-dots.
+           Den första sliden har is-active så ett citat syns även utan skript.
+           TODO: byt ut platshållarcitaten och bilderna mot riktiga. -->
+      <section class="quote-band" id="roster">
         <div class="container">
-          <div class="row align-items-center gy-4 gx-lg-5">
-            <div class="col-lg-7 order-lg-2">
-              <h2 class="section-title">Partners i plattformen.</h2>
-              <p class="section-lead section-lead--narrow">
-                Integrationer som redan är i drift hos medlemmarna.
-              </p>
+          <div class="quote-carousel" data-carousel>
+            <div class="quote-track">
+              <article
+                class="quote-slide is-active"
+                data-carousel-slide
+                aria-hidden="false"
+              >
+                <div class="row align-items-center gy-4">
+                  <div class="col-sm-8 col-md-5 col-lg-4">
+                    <img
+                      class="quote-photo"
+                      src="assets/person.jpg"
+                      alt="Porträtt av en person i beige ullkappa och vit mössa i ett snöigt vinterlandskap"
+                      width="1846"
+                      height="2394"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+
+                  <div class="col-md-7 col-lg-7 offset-lg-1">
+                    <figure class="quote">
+                      <blockquote class="quote-text">
+                        ”Vi har framför allt på senare år märkt en otrolig vilja
+                        och utvecklingstakt med stor insikt om våra behov som
+                        kund.”
+                      </blockquote>
+                      <figcaption class="quote-source">
+                        Lisa Flacké · HR · Ramundberget
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="quote-slide"
+                data-carousel-slide
+                aria-hidden="true"
+              >
+                <div class="row align-items-center gy-4">
+                  <div class="col-sm-8 col-md-5 col-lg-4">
+                    <img
+                      class="quote-photo"
+                      src="assets/person2.jpg"
+                      alt=""
+                      width="1846"
+                      height="2394"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+
+                  <div class="col-md-7 col-lg-7 offset-lg-1">
+                    <figure class="quote">
+                      <blockquote class="quote-text">
+                        ”Citat från en medlem. Två till tre rader är lagom — byt
+                        ut mot ett riktigt citat innan sidan publiceras.”
+                      </blockquote>
+                      <figcaption class="quote-source">
+                        Namn · Roll · Anläggning
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="quote-slide"
+                data-carousel-slide
+                aria-hidden="true"
+              >
+                <div class="row align-items-center gy-4">
+                  <div class="col-sm-8 col-md-5 col-lg-4">
+                    <img
+                      class="quote-photo"
+                      src="assets/person3.jpg"
+                      alt=""
+                      width="1846"
+                      height="2394"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+
+                  <div class="col-md-7 col-lg-7 offset-lg-1">
+                    <figure class="quote">
+                      <blockquote class="quote-text">
+                        ”Ett tredje citat. Karusellen byter slide var sjunde
+                        sekund och pausar när besökaren hovrar eller tabbar in i
+                        den.”
+                      </blockquote>
+                      <figcaption class="quote-source">
+                        Namn · Roll · Anläggning
+                      </figcaption>
+                    </figure>
+                  </div>
+                </div>
+              </article>
             </div>
 
-            <div class="col-lg-5 order-lg-1">
-              <img
-                class="page-image"
-                src="assets/wintersteiger.png"
-                alt="En streckkod på ett par skidor skannas i uthyrningens verkstad."
-                width="1200"
-                height="800"
-                loading="lazy"
-              />
+            <div class="quote-controls">
+              <button type="button" class="quote-arrow" data-carousel-prev>
+                <span class="quote-arrow-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Föregående citat</span>
+              </button>
+              <button
+                type="button"
+                class="quote-arrow quote-arrow--next"
+                data-carousel-next
+              >
+                <span class="quote-arrow-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Nästa citat</span>
+              </button>
+
+              <div class="quote-dots">
+                <button
+                  type="button"
+                  class="quote-dot"
+                  data-carousel-dot
+                  aria-current="true"
+                >
+                  <span class="visually-hidden">Visa citat 1</span>
+                </button>
+                <button
+                  type="button"
+                  class="quote-dot"
+                  data-carousel-dot
+                  aria-current="false"
+                >
+                  <span class="visually-hidden">Visa citat 2</span>
+                </button>
+                <button
+                  type="button"
+                  class="quote-dot"
+                  data-carousel-dot
+                  aria-current="false"
+                >
+                  <span class="visually-hidden">Visa citat 3</span>
+                </button>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <h3 class="group-title">Betalning &amp; kassa</h3>
+      <!-- Medlemmarna, grupperade per land.
+           Ett kort = <article class="card-r360"> med namn, en rad om
+           anläggningen och en länk till deras webbplats. Ingen logotyp. -->
+      <section class="section" id="medlemmar-alla">
+        <div class="container">
+          <h3 class="group-title">Sverige</h3>
 
           <div class="row g-4">
             <div class="col-md-6 col-lg-4">
               <article class="card-r360">
-                <h3>Nets</h3>
+                <h3>Branäs</h3>
                 <p>
-                  En checkout som ger mer försäljning och mindre strul? Easy. (by
-                  Nets)
+                  Prisbelönta Branäs är sedan flera år tillbaka en av Sveriges
+                  populäraste skidanläggningar.
                 </p>
                 <a
                   class="link-arrow mt-3"
-                  href="https://payments.nets.eu/sv-SE"
+                  href="https://www.branas.se/"
                   target="_blank"
                   rel="noopener"
-                  >payments.nets.eu</a
+                  >branas.se</a
                 >
               </article>
             </div>
             <div class="col-md-6 col-lg-4">
               <article class="card-r360">
-                <h3>Kustom</h3>
+                <h3>Idre Fjäll</h3>
                 <p>
-                  Kustom Checkout erbjuder alla betalsätt dina kunder vill ha,
-                  inklusive Klarna.
+                  På Idre Fjäll spenderar du semestern bland riktiga fjäll både
+                  sommar, höst och vinter.
                 </p>
                 <a
                   class="link-arrow mt-3"
-                  href="https://www.kustom.co/sv"
+                  href="https://www.idrefjall.se/"
                   target="_blank"
                   rel="noopener"
-                  >kustom.co</a
+                  >idrefjall.se</a
                 >
               </article>
             </div>
             <div class="col-md-6 col-lg-4">
               <article class="card-r360">
-                <h3>Yabie</h3>
+                <h3>Stöten</h3>
                 <p>
-                  Certifierat kassasystem, komplett betallösning och all tänkbar
-                  statistik ett knapptryck bort.
+                  Sälenfjällens högsta fallhöjdsmeter och en av landets bästa
+                  pister.
                 </p>
                 <a
                   class="link-arrow mt-3"
-                  href="https://yabie.com/"
+                  href="https://www.stoten.se/"
                   target="_blank"
                   rel="noopener"
-                  >yabie.com</a
+                  >stoten.se</a
                 >
               </article>
             </div>
             <div class="col-md-6 col-lg-4">
               <article class="card-r360">
-                <h3>Winpos</h3>
+                <h3>Kläppen Ski Resort</h3>
+                <p>Kläppen Ski Resort är en familjeägd skidanläggning.</p>
+                <a
+                  class="link-arrow mt-3"
+                  href="https://www.klappen.se/"
+                  target="_blank"
+                  rel="noopener"
+                  >klappen.se</a
+                >
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <h3>Ramundberget</h3>
                 <p>
-                  Winpos erbjuder branschanpassade kassalösningar för effektiv
-                  verksamhetsstyrning.
+                  Mitt bland Härjedalens vackra fjäll ligger den familjeägda
+                  lugna fjällanläggningen.
                 </p>
                 <a
                   class="link-arrow mt-3"
-                  href="https://winpos.com/sv/startsida/"
+                  href="https://www.ramundberget.se/"
                   target="_blank"
                   rel="noopener"
-                  >winpos.com</a
+                  >ramundberget.se</a
+                >
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <h3>Orsa Grönklitt</h3>
+                <p>Orsa Grönklitt erbjuder en aktiv semester året om.</p>
+                <a
+                  class="link-arrow mt-3"
+                  href="https://www.orsagronklitt.se/"
+                  target="_blank"
+                  rel="noopener"
+                  >orsagronklitt.se</a
+                >
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <h3>Tänndalen</h3>
+                <p>Fjällen ingjuter oss med liv.</p>
+                <a
+                  class="link-arrow mt-3"
+                  href="https://www.tanndalen.com/"
+                  target="_blank"
+                  rel="noopener"
+                  >tanndalen.com</a
+                >
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <h3>Järvsöbacken</h3>
+                <p>
+                  Vintersemester i Järvsöbacken med skidåkning för hela
+                  familjen.
+                </p>
+                <a
+                  class="link-arrow mt-3"
+                  href="https://www.jarvsobacken.se/"
+                  target="_blank"
+                  rel="noopener"
+                  >jarvsobacken.se</a
+                >
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <h3>Idre Himmelfjäll</h3>
+                <p>
+                  Idre Himmelfjäll ligger vackert inbäddat i storslagen
+                  fjällnatur.
+                </p>
+                <a
+                  class="link-arrow mt-3"
+                  href="https://www.idrehimmelfjall.se/"
+                  target="_blank"
+                  rel="noopener"
+                  >idrehimmelfjall.se</a
+                >
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <h3>Destination Järvsö</h3>
+                <p>
+                  Destination Järvsö är en del av fyra kommuner i Hälsingland.
+                </p>
+                <a
+                  class="link-arrow mt-3"
+                  href="https://jarvso.se/"
+                  target="_blank"
+                  rel="noopener"
+                  >jarvso.se</a
+                >
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <h3>Fjätervålen</h3>
+                <p>
+                  1983 bildades Fjätervålen Skidlift AB, av ett antal
+                  entusiastiska stugägare.
+                </p>
+                <a
+                  class="link-arrow mt-3"
+                  href="https://fjatervalen.se/"
+                  target="_blank"
+                  rel="noopener"
+                  >fjatervalen.se</a
+                >
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <h3>Säfsen</h3>
+                <p>
+                  Säfsen är en upplevelsedestination i södra Dalarna med
+                  verksamhet hela året.
+                </p>
+                <a
+                  class="link-arrow mt-3"
+                  href="https://safsen.se/"
+                  target="_blank"
+                  rel="noopener"
+                  >safsen.se</a
+                >
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <h3>Kappruet</h3>
+                <p>På vintern har Kappruet skidåkning i vacker natur.</p>
+                <a
+                  class="link-arrow mt-3"
+                  href="https://kappruet.se/"
+                  target="_blank"
+                  rel="noopener"
+                  >kappruet.se</a
+                >
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <h3>Hassela</h3>
+                <p>Upplev naturen och vildmarken på nära håll.</p>
+                <a
+                  class="link-arrow mt-3"
+                  href="https://hasselaski.se/"
+                  target="_blank"
+                  rel="noopener"
+                  >hasselaski.se</a
+                >
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <h3>Bygdsiljumsbacken</h3>
+                <p>Bygdsiljumsbacken öppnade redan 1943.</p>
+                <a
+                  class="link-arrow mt-3"
+                  href="https://bygdsiljumsbacken.se/"
+                  target="_blank"
+                  rel="noopener"
+                  >bygdsiljumsbacken.se</a
+                >
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <h3>Kungsberget</h3>
+                <p>
+                  Kungsberget växer för varje år som går och är idag en av
+                  Sveriges 10 populäraste skidanläggningar.
+                </p>
+                <a
+                  class="link-arrow mt-3"
+                  href="https://www.kungsberget.se/"
+                  target="_blank"
+                  rel="noopener"
+                  >kungsberget.se</a
+                >
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <h3>Dundret</h3>
+                <p>Fjället mitt i stan på Gällivares hemmafjäll.</p>
+                <a
+                  class="link-arrow mt-3"
+                  href="https://www.dundretlapland.com/"
+                  target="_blank"
+                  rel="noopener"
+                  >dundretlapland.com</a
+                >
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="card-r360">
+                <h3>Bydalen</h3>
+                <p>Mitt i Bydalsfjällen hittar du Bydalens Wärdshus.</p>
+                <a
+                  class="link-arrow mt-3"
+                  href="https://www.bydalen.com/"
+                  target="_blank"
+                  rel="noopener"
+                  >bydalen.com</a
                 >
               </article>
             </div>
           </div>
 
-          <h3 class="group-title">Statistik &amp; marknadsföring</h3>
+          <h3 class="group-title">Norge</h3>
 
           <div class="row g-4">
             <div class="col-md-6 col-lg-4">
               <article class="card-r360">
-                <h3>Qbim</h3>
+                <h3>Skeikampen Booking</h3>
                 <p>
-                  Med Qbim erbjuds ni affärsanalysverktyget ”Skianalytics”.
+                  Skeikampen Booking tilbyr hytteutleie på Skeikampen for alle
+                  gjennom hele året.
                 </p>
                 <a
                   class="link-arrow mt-3"
-                  href="https://qbim.se/"
+                  href="https://www.skeikampenbooking.no/no/"
                   target="_blank"
                   rel="noopener"
-                  >qbim.se</a
+                  >skeikampenbooking.no</a
                 >
               </article>
             </div>
             <div class="col-md-6 col-lg-4">
               <article class="card-r360">
-                <h3>Freeride.se</h3>
-                <p>
-                  Freeride.se är Sveriges största skidmedia.
-                </p>
+                <h3>Slaatta Skisenter</h3>
+                <p>Winter is magical in Geilo, with spectacular scenery.</p>
                 <a
                   class="link-arrow mt-3"
-                  href="https://www.freeride.se/"
+                  href="https://slaattaskisenter.no/en/"
                   target="_blank"
                   rel="noopener"
-                  >freeride.se</a
+                  >slaattaskisenter.no</a
                 >
               </article>
             </div>
             <div class="col-md-6 col-lg-4">
               <article class="card-r360">
-                <h3>APSIS One</h3>
+                <h3>Alpinco</h3>
                 <p>
-                  En prisvärd och lättanvänd plattform med inbyggda kampanjverktyg
-                  för e-post, Marketing Automation och SMS.
+                  Alpinco ble startet i 2012 og er i dag eier av alpinanleggene
+                  Hafjell og Kvitfjell.
                 </p>
                 <a
                   class="link-arrow mt-3"
-                  href="https://apsis.se/"
+                  href="https://www.alpinco.no/"
                   target="_blank"
                   rel="noopener"
-                  >apsis.se</a
-                >
-              </article>
-            </div>
-          </div>
-
-          <h3 class="group-title">Digitala lås &amp; elstolpar</h3>
-
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-              <article class="card-r360">
-                <h3>Telkey Solutions</h3>
-                <p>
-                  Leverantör av multifunktionslås för bland annat stugor och
-                  lägenheter.
-                </p>
-                <a
-                  class="link-arrow mt-3"
-                  href="https://telkey.com/"
-                  target="_blank"
-                  rel="noopener"
-                  >telkey.com</a
-                >
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <article class="card-r360">
-                <h3>Inlet</h3>
-                <p>
-                  En plattform för låsintegration som kopplar samman r360s
-                  bokningssystem med alla typer av lås.
-                </p>
-                <a
-                  class="link-arrow mt-3"
-                  href="https://inlet.no/"
-                  target="_blank"
-                  rel="noopener"
-                  >inlet.no</a
-                >
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <article class="card-r360">
-                <h3>Tallykey</h3>
-                <p>
-                  Erbjuder enkla eller avancerade elstolpar av högsta kvalité för
-                  camping, ställplats eller marina.
-                </p>
-                <a
-                  class="link-arrow mt-3"
-                  href="https://www.tallykey.dk/?lang=en"
-                  target="_blank"
-                  rel="noopener"
-                  >tallykey.dk</a
-                >
-              </article>
-            </div>
-          </div>
-
-          <h3 class="group-title">Skipassystem</h3>
-
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-              <article class="card-r360">
-                <h3>Axess</h3>
-                <p>
-                  Leverantör av skipassystem. Säker, skräddarsydd och
-                  framtidsinriktad.
-                </p>
-                <a
-                  class="link-arrow mt-3"
-                  href="https://www.teamaxess.com/en"
-                  target="_blank"
-                  rel="noopener"
-                  >teamaxess.com</a
-                >
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <article class="card-r360">
-                <h3>Skidata</h3>
-                <p>
-                  En världsledande leverantör av entrésystem för t ex
-                  skidanläggningar och arenor.
-                </p>
-                <a
-                  class="link-arrow mt-3"
-                  href="https://www.skidata.com/sv-se/"
-                  target="_blank"
-                  rel="noopener"
-                  >skidata.com</a
-                >
-              </article>
-            </div>
-          </div>
-
-          <h3 class="group-title">Destinationsapp</h3>
-
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-              <article class="card-r360">
-                <h3>Nonius</h3>
-                <p>
-                  Tillhandahåller den mest kompletta portföljen för
-                  gästtekniklösningar för en kontaktlös digital gästresa.
-                </p>
-                <a
-                  class="link-arrow mt-3"
-                  href="https://noniussolutions.com/sv/"
-                  target="_blank"
-                  rel="noopener"
-                  >noniussolutions.com</a
-                >
-              </article>
-            </div>
-          </div>
-
-          <h3 class="group-title">Distribution &amp; fakturering</h3>
-
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-              <article class="card-r360">
-                <h3>Siteminder</h3>
-                <p>
-                  En marknadsledande leverantör när det kommer till channel
-                  management.
-                </p>
-                <a
-                  class="link-arrow mt-3"
-                  href="https://www.siteminder.com/"
-                  target="_blank"
-                  rel="noopener"
-                  >siteminder.com</a
-                >
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <article class="card-r360">
-                <h3>InExchange</h3>
-                <p>
-                  Hjälper er att leverera och ta emot fakturor på bästa sätt.
-                </p>
-                <a
-                  class="link-arrow mt-3"
-                  href="https://inexchange.se/"
-                  target="_blank"
-                  rel="noopener"
-                  >inexchange.se</a
-                >
-              </article>
-            </div>
-          </div>
-
-          <h3 class="group-title">Branschorganisationer</h3>
-
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-              <article class="card-r360">
-                <h3>SLAO</h3>
-                <p>
-                  Svenska Skidanläggningars Organisation – SLAO har drygt 300
-                  medlemmar.
-                </p>
-                <a
-                  class="link-arrow mt-3"
-                  href="https://www.slao.se/"
-                  target="_blank"
-                  rel="noopener"
-                  >slao.se</a
-                >
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <article class="card-r360">
-                <h3>ALF</h3>
-                <p>
-                  Norske alpinanlegg og fjelldestinasjoner är
-                  branschorganisationen för norska fjälldestinationer.
-                </p>
-                <a
-                  class="link-arrow mt-3"
-                  href="https://alpinogfjell.no/"
-                  target="_blank"
-                  rel="noopener"
-                  >alpinogfjell.no</a
+                  >alpinco.no</a
                 >
               </article>
             </div>
           </div>
 
           <div class="section-actions">
-            <a class="btn-r360 btn-r360--primary" href="#boka"
-              >Bli partner</a
-            >
+            <a class="btn-r360 btn-r360--primary" href="#boka">Bli medlem</a>
           </div>
         </div>
       </section>

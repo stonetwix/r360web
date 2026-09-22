@@ -50,10 +50,37 @@
                   <li><a href="tillaggstjanster.html">Tilläggstjänster</a></li>
                 </ul>
               </li>
-              <li><a href="#medlemmarna">Medlemmarna</a></li>
-              <li><a href="#om-oss">Om oss</a></li>
+              <li><a href="medlemmarna.html">Medlemmarna</a></li>
               <li><a href="partners.html">Partners</a></li>
-              <li><a href="#support">Support</a></li>
+              <li class="nav-has-menu" data-dropdown>
+                <button
+                  class="nav-trigger"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="navAbout"
+                  data-dropdown-trigger
+                >
+                  Om oss<span class="nav-caret" aria-hidden="true"></span>
+                </button>
+                <ul class="nav-menu" id="navAbout" data-dropdown-menu>
+                  <li>
+                    <a href="vart-team.html">Vårt team</a>
+                  </li>
+                  <li>
+                    <a href="https://jobb.r360.se/" target="_blank" rel="noopener"
+                      >Lediga tjänster</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a
+                  href="https://r360support.zendesk.com/auth/v3/signin?brand_id=4756972778013&amp;locale=sv&amp;return_to=https%3A%2F%2Fr360support.zendesk.com%2Fhc%2Fsv&amp;role=end_user"
+                  target="_blank"
+                  rel="noopener"
+                  >Support</a
+                >
+              </li>
             </ul>
             <div class="nav-actions">
               <a class="btn-r360 btn-r360--primary" href="#boka"
@@ -158,7 +185,7 @@
         <div class="container">
           <p class="members-note">
             Tre av fyra bland Sveriges 15 största anläggningar.
-            <a class="link-arrow link-arrow--light" href="#medlemmar-alla"
+            <a class="link-arrow link-arrow--light" href="medlemmarna.html"
               >Se alla medlemmar</a
             >
           </p>
@@ -393,9 +420,15 @@
             <li>Skidata</li>
             <li>Axess</li>
             <li>Nets</li>
-            <li>Visma</li>
-            <li>Fortnox</li>
+            <li>Qbim</li>
+            <li>Apsis</li>
           </ul>
+
+          <div class="section-actions">
+            <a class="btn-r360 btn-r360--primary" href="partners.html"
+              >Alla partners</a
+            >
+          </div>
         </div>
       </section>
 
@@ -452,7 +485,7 @@
           <div class="col-6 col-lg-2">
             <h2 class="footer-heading">Bolaget</h2>
             <ul class="footer-list">
-              <li><a href="#medlemmarna">Medlemmar</a></li>
+              <li><a href="medlemmarna.html">Medlemmar</a></li>
               <li><a href="partners.html">Partners</a></li>
               <li><a href="#om-oss">Om oss</a></li>
             </ul>

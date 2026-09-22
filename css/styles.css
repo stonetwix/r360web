@@ -500,8 +500,9 @@ a:hover { color: var(--marin); }
   height: 100%;
   padding: 1.75rem 1.75rem 2rem;
   background: var(--limestone);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius);
   border: 1px solid transparent;
+  box-shadow: 0 14px 28px -24px rgba(13, 62, 96, .5);
   transition: border-color .18s ease, transform .18s ease;
 }
 .section--alt .card-r360 { background: var(--paper); }
@@ -1149,6 +1150,130 @@ a:hover { color: var(--marin); }
 }
 .quote-dot:hover { background: var(--slate); }
 .quote-dot[aria-current="true"] { background: var(--copper); }
+
+/* ---------- 10b. Formulär ---------- */
+.form-card {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+}
+
+.form-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 768px) {
+  .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* Meddelandet tar hela bredden under de korta fälten. */
+  .field--full { grid-column: 1 / -1; }
+}
+
+.field {
+  display: grid;
+  gap: .45rem;
+  margin: 0;
+}
+.field-label {
+  color: var(--slate);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.field-required {
+  margin-left: .25rem;
+  color: var(--copper);
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: .85rem 1rem;
+  background: var(--limestone);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  color: var(--marin);
+  font-family: var(--sans);
+  font-size: var(--t-base);
+  line-height: 1.5;
+  transition: background-color .18s ease, border-color .18s ease;
+}
+.field textarea { resize: vertical; }
+.field input:hover,
+.field textarea:hover { border-color: var(--line); }
+/* Fokus byter bakgrund till papper — fältet man skriver i lyfts fram.
+   Den globala fokusringen ligger kvar för den som tabbar. */
+.field input:focus,
+.field textarea:focus {
+  background: var(--paper);
+  border-color: var(--copper);
+}
+/* :user-invalid slår till först när man lämnat ett felaktigt fält — tomma
+   obligatoriska fält markeras alltså inte direkt vid sidladdning. */
+.field input:user-invalid { border-color: var(--copper); }
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  margin-top: 1.75rem;
+}
+.form-note {
+  color: var(--slate);
+  font-size: var(--t-xs);
+}
+
+.contact-aside { padding-top: .5rem; }
+.contact-title {
+  font-family: var(--sans);
+  font-size: var(--t-md);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+
+/* Kontaktpersonerna: rundat porträtt bredvid vem man når och hur. */
+.contact-list { margin-top: 1.5rem; }
+.contact-person {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.contact-photo {
+  flex: 0 0 auto;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 16%;
+  background: var(--paper);
+}
+
+.contact-label {
+  color: var(--slate);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.contact-name {
+  margin-top: .15rem;
+  font-family: var(--serif);
+  font-size: var(--t-md);
+  font-weight: 500;
+  line-height: 1.2;
+}
+.contact-line {
+  margin-top: .25rem;
+  font-size: var(--t-sm);
+}
+.contact-line--mild { color: var(--slate); font-size: var(--t-xs); }
+
+.contact-aside .fact-list { margin-top: 0; }
 
 /* ---------- 11. CTA ---------- */
 .cta {

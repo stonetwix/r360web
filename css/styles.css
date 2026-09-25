@@ -18,9 +18,9 @@
 /* ---------- 1. Tokens ---------- */
 :root {
   /* Palett */
-  --paper:   #F4EFE4;   /* Papper */
+  --paper:   #fcf8f0;   /* Papper */
   --marin:   #0D3E60;   /* Marin */
-  --limestone: #EAE5DA;   /* Kalk */
+  --limestone: #f0ebe2;   /* Kalk */
   --copper:  #B4683F;   /* Accent Koppar */
   --slate: #6B8291;   /* Sekundär Skiffer */
 
@@ -675,11 +675,11 @@ a:hover { color: var(--marin); }
 /* Ligger modulerna först i sektionen finns ingen rubrik att få luft från. */
 .modules:first-child { margin-top: 0; }
 
+/* På mobil ligger bilden överst till vänster och texten går under den i
+   hela kortets bredd — en spalt bredvid en 112px-bricka blir för smal. */
 .module {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  align-items: start;
-  gap: 1.25rem;
+  gap: 1rem;
   padding: 1.5rem;
   background: var(--limestone);
   border: 1px solid transparent;
@@ -689,6 +689,15 @@ a:hover { color: var(--marin); }
 .module:hover {
   border-color: var(--line);
   transform: translateY(-3px);
+}
+
+/* Från liten surfplatta och uppåt ryms bild och text bredvid varandra. */
+@media (min-width: 576px) {
+  .module {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: start;
+    gap: 1.25rem;
+  }
 }
 
 /* Illustrationen är nu en liten bricka i stället för ett halvt sidbrett fält. */

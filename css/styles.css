@@ -562,7 +562,7 @@ a:hover { color: var(--marin); }
   max-width: 52ch;
 }
 
-/* Liten etikett över varje grupp av kort (partners, medlemmar). */
+/* Liten etikett över varje grupp av kort (partners, kunder). */
 .group-title {
   margin-top: clamp(3rem, 6vw, 4.25rem);
   padding-top: 1.25rem;
@@ -977,9 +977,9 @@ a:hover { color: var(--marin); }
   letter-spacing: .08em;
   text-transform: uppercase;
 }
-.roster-tel {
-  display: inline-block;
-  margin-top: .5rem;
+.roster-contact {
+  display: block;
+  margin-top: .4rem;
   font-size: var(--t-xs);
 }
 

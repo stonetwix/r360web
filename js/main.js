@@ -110,7 +110,7 @@
     window.addEventListener('scroll', setStuck, { passive: true });
   }
 
-  /* --- Medlemsbandet: dubblera listan så loopen blir sömlös --- */
+  /* --- Kundbandet: dubblera listan så loopen blir sömlös --- */
   document.querySelectorAll('[data-marquee]').forEach(function (track) {
     var list = track.querySelector('[data-marquee-list]');
     if (!list || reduceMotion) return;

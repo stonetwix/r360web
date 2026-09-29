@@ -1109,6 +1109,8 @@ a:hover { color: var(--marin); }
 .quote-band {
   padding: clamp(3.5rem, 7vw, 5.5rem) 0;
   border-bottom: 1px solid var(--line);
+  /* Dekorationerna runt bilden får sticka ut, men aldrig bredda sidan. */
+  overflow-x: clip;
 }
 
 .quote-photo {
@@ -1120,6 +1122,59 @@ a:hover { color: var(--marin); }
   object-position: 50% 30%;
   border-radius: var(--radius-lg);
   background: var(--limestone);
+}
+
+/* Citatbilden får samma tre motiv som illustrationerna: en kopparcirkel
+   bakom övre högra hörnet, en förskjuten ram och en prickruta nere till
+   vänster. --edge styr hur långt utanför bilden de ligger. */
+.quote-figure {
+  position: relative;
+  isolation: isolate;
+  --edge: 1rem;
+}
+@media (min-width: 768px) {
+  .quote-figure { --edge: 1.75rem; }
+}
+
+/* Cirkeln sitter med sin mitt ungefär i bildens hörn. */
+.quote-figure::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: calc(var(--edge) * -2);
+  right: calc(var(--edge) * -1.5);
+  width: clamp(88px, 32%, 160px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--copper);
+}
+
+/* Ramen är förskjuten uppåt — uppe och på sidorna utanför bilden,
+   nedtill innanför den — och lite vriden. */
+.quote-figure::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset:
+    calc(var(--edge) * -0.8)
+    calc(var(--edge) * -0.5)
+    calc(var(--edge) * 0.6)
+    calc(var(--edge) * -0.5);
+  border: 1px solid var(--marin);
+  transform: rotate(-1.4deg);
+  pointer-events: none;
+}
+
+.quote-figure-dots {
+  position: absolute;
+  z-index: -1;
+  left: calc(var(--edge) * -1.25);
+  bottom: calc(var(--edge) * -1.25);
+  width: clamp(72px, 28%, 116px);
+  aspect-ratio: 1;
+  background-image: radial-gradient(var(--slate) 1.2px, transparent 1.3px);
+  background-size: 11px 11px;
+  opacity: .55;
 }
 
 .quote { margin: 0; }
@@ -1146,10 +1201,7 @@ a:hover { color: var(--marin); }
 }
 .quote-carousel.is-reverse { --quote-shift: -40px; }
 
-.quote-track {
-  display: grid;
-  overflow: hidden;
-}
+.quote-track { display: grid; }
 
 /* Sliden som väntar står på den sida man är på väg ifrån, den som lämnar
    går ut åt andra hållet — så citaten byts av i samma riktning. */

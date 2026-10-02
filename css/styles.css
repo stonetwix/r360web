@@ -1061,7 +1061,7 @@ a:hover { color: var(--marin); }
    egen liten lapp, i samma språk som partnerlapparna på startsidan. */
 .pitch {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   gap: .8rem;
   max-width: 46ch;
   margin-top: 1.75rem;
@@ -1084,12 +1084,14 @@ a:hover { color: var(--marin); }
 /* På den ljusa sektionen byter lappen plats i färg med bakgrunden. */
 .section--alt .pitch { background: var(--paper); }
 
-/* Kopparpricken som på partnerlapparna. */
+/* Kopparpricken som på partnerlapparna. Marginalen centrerar den på
+   första textraden även när texten bryts på två. */
 .pitch::before {
   content: "";
   flex: 0 0 auto;
   width: 7px;
   height: 7px;
+  margin-top: .5em;
   border-radius: 50%;
   background: var(--copper);
 }

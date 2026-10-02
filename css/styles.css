@@ -892,11 +892,8 @@ a:hover { color: var(--marin); }
   gap: 1.25rem;
   margin-top: clamp(2.5rem, 5vw, 3.5rem);
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .stage-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (min-width: 992px) {
-  .stage-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 .stage {
@@ -957,6 +954,29 @@ a:hover { color: var(--marin); }
   color: var(--slate);
   font-size: var(--t-sm);
   line-height: 1.6;
+}
+
+/* Punktlista i kortet — kopparprick i stället för vanlig bullet. */
+.stage-list {
+  display: grid;
+  gap: .45rem;
+  margin-top: 1rem;
+  font-size: var(--t-sm);
+  line-height: 1.5;
+}
+.stage-list li {
+  position: relative;
+  padding-left: 1.1rem;
+}
+.stage-list li::before {
+  content: "";
+  position: absolute;
+  top: .55em;
+  left: .1rem;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--copper);
 }
 
 /* Taggarna trycks ned mot kortets botten så att korten linjerar i raden. */

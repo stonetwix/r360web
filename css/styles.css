@@ -726,11 +726,8 @@ a:hover { color: var(--marin); }
 }
 
 /* Faktaruta vid en utpekad modul */
+/* Ingen ruta — noten står i samma spalt som brödtexten ovanför. */
 .note {
-  padding: clamp(1.5rem, 3vw, 2rem);
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
   margin-top: 2rem;
 }
 .note-title {
@@ -1101,6 +1098,10 @@ a:hover { color: var(--marin); }
   margin-top: 0;
   margin-bottom: 1.5rem;
 }
+
+/* Tätt mot det ovanför: den negativa marginalen äter upp radens egen
+   bottenluft (gy-4 = 1.5rem) så lappen hamnar nära bilden. */
+.pitch--tatt { margin-top: -1rem; }
 
 /* Centrerad variant, för avsnitt där rubriken står mitt på sidan. */
 .pitch--mitten {

@@ -838,25 +838,23 @@ a:hover { color: var(--marin); }
   width: 22px;
   height: 22px;
 }
-/* Platshållare tills ikonerna finns i assets. */
-.step-icon--tom {
-  border: 1.5px solid currentColor;
-  border-radius: 4px;
-  opacity: .7;
-}
 
 @media (min-width: 768px) {
   .steps {
     --dot: 48px;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
+    grid-template-columns: 0.5fr repeat(5, 1fr) 0.5fr;
     gap: 0;
   }
 
   .step {
     grid-template-columns: none;
     justify-items: center;
+    align-content: start;
     text-align: center;
   }
+  /* Ytterstegen ställer sig mot sin kant så raden fyller hela bredden. */
+  .step:first-child { justify-items: start; text-align: left; }
+  .step:last-child { justify-items: end; text-align: right; }
   .step-dot,
   .step-index,
   .step-label {
@@ -878,8 +876,8 @@ a:hover { color: var(--marin); }
     height: 1px;
   }
   .step::before { left: 0; }
-  .step:first-child::before { left: 50%; }
-  .step:last-child::before { right: 50%; }
+  .step:first-child::before { left: calc(var(--dot) / 2); }
+  .step:last-child::before { right: calc(var(--dot) / 2); }
 }
 
 @media (min-width: 992px) {
@@ -911,15 +909,18 @@ a:hover { color: var(--marin); }
 
 .stage-icon {
   display: block;
+  flex: 0 0 auto;
   width: 28px;
   height: 28px;
   color: var(--marin);
 }
-/* Platshållare tills ikonerna finns i assets. */
-.stage-icon--tom {
-  border: 1.5px solid currentColor;
-  border-radius: 6px;
-  opacity: .55;
+
+/* Ikonen står bredvid rubriken, numret ensamt överst i kortet. */
+.stage-head {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+  margin-top: .5rem;
 }
 
 /* Numret får ett kort streck efter sig, som i skissen. */
@@ -927,7 +928,6 @@ a:hover { color: var(--marin); }
   display: flex;
   align-items: center;
   gap: .55rem;
-  margin-top: 1.5rem;
   color: var(--copper);
   font-size: var(--t-xs);
   font-weight: 600;
@@ -942,7 +942,6 @@ a:hover { color: var(--marin); }
 }
 
 .stage-title {
-  margin-top: .5rem;
   font-family: var(--sans);
   font-size: var(--t-lg);
   font-weight: 600;
@@ -1360,6 +1359,13 @@ a:hover { color: var(--marin); }
   margin-top: 1.25rem;
   font-size: var(--t-sm);
   line-height: 1.65;
+}
+
+/* Ikoner (Font Awesome Free). Själva svg:n ligger i markupen och färgas
+   med fill: currentColor — vit i cirklarna, marinblå på korten. */
+.step-icon,
+.stage-icon {
+  fill: currentColor;
 }
 
 /* ---------- 10. Stats & quote ---------- */

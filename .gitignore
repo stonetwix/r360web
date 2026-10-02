@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+.AppleDouble
+Icon?
+
+# Redigerare
+.vscode/
+.idea/
+*.swp
+
+# Loggar och tempfiler
+*.log
+*~

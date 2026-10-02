@@ -765,6 +765,279 @@ a:hover { color: var(--marin); }
   border-radius: var(--radius-lg);
 }
 
+/* Gästresan: sju steg på en linje. På mobil löper linjen lodrätt genom
+   cirklarna, från liten surfplatta och uppåt vågrätt över sidan. */
+.steps {
+  --dot: 56px;
+  --steg-gap: 1.5rem;
+  display: grid;
+  gap: var(--steg-gap);
+  margin: clamp(2.5rem, 5vw, 3.5rem) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: 1.15rem;
+  align-items: center;
+}
+
+/* Linjen går ut i mellanrummet och möter nästa steg. De yttersta stegen
+   drar bara halva vägen, så att linjen börjar och slutar i en cirkel. */
+.step::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: calc(var(--dot) / 2);
+  top: 0;
+  bottom: calc(var(--steg-gap) * -1);
+  width: 1px;
+  background: var(--marin);
+}
+.step:first-child::before { top: 50%; }
+.step:last-child::before { bottom: 50%; }
+
+.step-dot {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  display: grid;
+  place-items: center;
+  width: var(--dot);
+  height: var(--dot);
+  border-radius: 50%;
+  background: var(--marin);
+  color: var(--paper);
+}
+.step--markerad .step-dot { background: var(--copper); }
+
+.step-index {
+  grid-column: 2;
+  grid-row: 1;
+  color: var(--copper);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: .12em;
+  line-height: 1;
+}
+.step-label {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: .4rem;
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.step-icon {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+/* Platshållare tills ikonerna finns i assets. */
+.step-icon--tom {
+  border: 1.5px solid currentColor;
+  border-radius: 4px;
+  opacity: .7;
+}
+
+@media (min-width: 768px) {
+  .steps {
+    --dot: 48px;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .step {
+    grid-template-columns: none;
+    justify-items: center;
+    text-align: center;
+  }
+  .step-dot,
+  .step-index,
+  .step-label {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .step-index { margin-bottom: .6rem; }
+  .step-label { margin-top: .75rem; }
+
+  /* Linjen ligger i cirklarnas mitt: nummerraden plus dess marginal
+     plus halva cirkeln. */
+  .step::before,
+  .step:first-child::before,
+  .step:last-child::before {
+    top: calc(var(--t-xs) + .6rem + var(--dot) / 2);
+    right: 0;
+    bottom: auto;
+    width: auto;
+    height: 1px;
+  }
+  .step::before { left: 0; }
+  .step:first-child::before { left: 50%; }
+  .step:last-child::before { right: 50%; }
+}
+
+@media (min-width: 992px) {
+  .steps { --dot: 56px; }
+}
+
+/* Vad som händer i varje steg: ett kort per steg, fyra på raden. */
+.stage-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+@media (min-width: 576px) {
+  .stage-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 992px) {
+  .stage-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.stage {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  background: var(--limestone);
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  transition: border-color .18s ease;
+}
+/* På den ljusa sektionen byter korten plats i färg med bakgrunden. */
+.section--alt .stage { background: var(--paper); }
+.stage:hover { border-color: var(--line); }
+
+.stage-icon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  color: var(--marin);
+}
+/* Platshållare tills ikonerna finns i assets. */
+.stage-icon--tom {
+  border: 1.5px solid currentColor;
+  border-radius: 6px;
+  opacity: .55;
+}
+
+/* Numret får ett kort streck efter sig, som i skissen. */
+.stage-index {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  margin-top: 1.5rem;
+  color: var(--copper);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: .12em;
+}
+.stage-index::after {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: currentColor;
+  opacity: .55;
+}
+
+.stage-title {
+  margin-top: .5rem;
+  font-family: var(--sans);
+  font-size: var(--t-lg);
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.25;
+}
+.stage-text {
+  margin-top: .65rem;
+  color: var(--slate);
+  font-size: var(--t-sm);
+  line-height: 1.6;
+}
+
+/* Taggarna trycks ned mot kortets botten så att korten linjerar i raden. */
+.stage-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+.stage-tags::before {
+  content: "";
+  flex: 1 0 100%;
+  height: 1px;
+  margin-bottom: .75rem;
+  background: var(--line);
+}
+.stage-tags li {
+  padding: .3rem .75rem;
+  background: var(--paper);
+  /* Koppar, nedtonad till en hint av ram. */
+  border: 1px solid rgba(180, 104, 63, .35);
+  border-radius: 999px;
+  color: var(--copper);
+  font-size: var(--t-xs);
+  line-height: 1.4;
+}
+.section--alt .stage-tags li { background: var(--limestone); }
+
+/* Samma resa inifrån: tre kort med ett kopparstreck överst och den del av
+   systemet som bär steget som etikett längst ned. */
+.aspect-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+@media (min-width: 768px) {
+  .aspect-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.aspect {
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem 1.5rem 1.5rem;
+  background: var(--limestone);
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  transition: border-color .18s ease;
+}
+.aspect:hover { border-color: var(--line); }
+.section--alt .aspect { background: var(--paper); }
+
+/* Strecket överst, samma accent som numren i stegen. */
+.aspect::before {
+  content: "";
+  width: 28px;
+  height: 2px;
+  background: var(--copper);
+}
+
+.aspect-title {
+  margin-top: 1.15rem;
+  font-family: var(--serif);
+  font-size: var(--t-lg);
+  font-weight: 500;
+}
+.aspect-text {
+  margin-top: .75rem;
+  font-size: var(--t-sm);
+  line-height: 1.6;
+}
+.aspect-label {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  color: var(--copper);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
 /* Nyheter: lappar på en anslagstavla */
 .news {
   padding-top: clamp(3rem, 6vw, 4.5rem);

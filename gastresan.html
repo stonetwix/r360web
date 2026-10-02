@@ -178,15 +178,253 @@
         </div>
       </section>
 
-      <!-- Resten av sidan är inte skriven än.
-           TODO: beskriv stegen i gästresan. -->
-      <section class="section">
+      <!-- Stegen i gästresan. -->
+      <section class="section" id="stegen">
         <div class="container">
+          <h2 class="section-title">Sju steg, ett system.</h2>
           <p class="section-lead">
-            Vi fyller den här sidan med innehåll inom kort. Vill ni veta mer
-            redan nu går det snabbare att ta ett samtal.
+            Resan ser likadan ut för gästen oavsett hur många delar av
+            anläggningen den rör vid. Skillnaden är vad ni slipper hantera
+            manuellt.
           </p>
-          <a class="link-arrow" href="contact.html">Boka ett samtal</a>
+
+          <!-- Ett steg = <li class="step"> med nummer, cirkel och etikett.
+               Cirkelns innehåll är en platshållare tills ikonerna finns —
+               byt <span class="step-icon step-icon--tom"> mot
+               <img class="step-icon" src="assets/..." alt="" width="22"
+               height="22" />. step--markerad gör cirkeln kopparfärgad. -->
+          <ol class="steps">
+            <li class="step">
+              <p class="step-index">01</p>
+              <span class="step-dot">
+                <span class="step-icon step-icon--tom" aria-hidden="true"></span>
+              </span>
+              <p class="step-label">Sökning</p>
+            </li>
+            <li class="step step--markerad">
+              <p class="step-index">02</p>
+              <span class="step-dot">
+                <span class="step-icon step-icon--tom" aria-hidden="true"></span>
+              </span>
+              <p class="step-label">Bokningen</p>
+            </li>
+            <li class="step">
+              <p class="step-index">03</p>
+              <span class="step-dot">
+                <span class="step-icon step-icon--tom" aria-hidden="true"></span>
+              </span>
+              <p class="step-label">Före ankomst</p>
+            </li>
+            <li class="step">
+              <p class="step-index">04</p>
+              <span class="step-dot">
+                <span class="step-icon step-icon--tom" aria-hidden="true"></span>
+              </span>
+              <p class="step-label">Ankomst</p>
+            </li>
+            <li class="step">
+              <p class="step-index">05</p>
+              <span class="step-dot">
+                <span class="step-icon step-icon--tom" aria-hidden="true"></span>
+              </span>
+              <p class="step-label">På plats</p>
+            </li>
+            <li class="step">
+              <p class="step-index">06</p>
+              <span class="step-dot">
+                <span class="step-icon step-icon--tom" aria-hidden="true"></span>
+              </span>
+              <p class="step-label">Avresa</p>
+            </li>
+            <li class="step">
+              <p class="step-index">07</p>
+              <span class="step-dot">
+                <span class="step-icon step-icon--tom" aria-hidden="true"></span>
+              </span>
+              <p class="step-label">Efter resan</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Vad varje steg innebär.
+           Ett kort = <article class="stage"> med ikon, nummer, rubrik, text
+           och taggar. Ikonen är en platshållare tills bilderna finns — byt
+           <span class="stage-icon stage-icon--tom"> mot
+           <img class="stage-icon" src="assets/..." alt="" width="28"
+           height="28" />. -->
+      <section class="section section--alt" id="i-varje-steg">
+        <div class="container">
+          <h2 class="section-title">Vad som händer i varje steg.</h2>
+          <p class="section-lead">
+            Under varje steg står det som är i arbete där — kanaler, moduler
+            och utskick. Samma gäst, samma bokning, hela vägen.
+          </p>
+
+          <div class="stage-grid">
+            <article class="stage">
+              <span class="stage-icon stage-icon--tom" aria-hidden="true"></span>
+              <p class="stage-index">01</p>
+              <h3 class="stage-title">Sökning</h3>
+              <p class="stage-text">
+                Gästen hittar logi, skipass, uthyrning och aktiviteter i samma
+                sökning — oavsett vilken kanal den kommer in via.
+              </p>
+              <ul class="stage-tags">
+                <li>Onlinebokning</li>
+                <li>OTA:er</li>
+                <li>Agenter</li>
+                <li>Ägare</li>
+                <li>Grupp &amp; konferens</li>
+                <li>Affärssystemet</li>
+              </ul>
+            </article>
+
+            <article class="stage">
+              <span class="stage-icon stage-icon--tom" aria-hidden="true"></span>
+              <p class="stage-index">02</p>
+              <h3 class="stage-title">Bokningen</h3>
+              <p class="stage-text">
+                Allt hamnar i en varukorg. En betalning, en bekräftelse, och
+                bokningen ligger direkt i affärssystemet.
+              </p>
+              <ul class="stage-tags">
+                <li>Varukorg</li>
+                <li>En betalning</li>
+                <li>Bekräftelse</li>
+                <li>Mina sidor</li>
+                <li>Paket</li>
+              </ul>
+            </article>
+
+            <article class="stage">
+              <span class="stage-icon stage-icon--tom" aria-hidden="true"></span>
+              <p class="stage-index">03</p>
+              <h3 class="stage-title">Före ankomst</h3>
+              <p class="stage-text">
+                Gästen kompletterar själv ända fram till ankomst. Skipass och
+                utrustning förbokas, tillval läggs till.
+              </p>
+              <ul class="stage-tags">
+                <li>Mina sidor</li>
+                <li>Tillval</li>
+                <li>Min Resa</li>
+                <li>Apsis</li>
+                <li>Skipass</li>
+                <li>Uthyrning</li>
+              </ul>
+            </article>
+
+            <article class="stage">
+              <span class="stage-icon stage-icon--tom" aria-hidden="true"></span>
+              <p class="stage-index">04</p>
+              <h3 class="stage-title">Ankomst</h3>
+              <p class="stage-text">
+                Enheten är städklar, låset öppnas digitalt och incheckningen
+                sker automatiskt — med eller utan reception.
+              </p>
+              <ul class="stage-tags">
+                <li>Automatisk incheckning</li>
+                <li>SMS incheckning</li>
+                <li>Digitala lås</li>
+                <li>Frontdesk</li>
+                <li>Städ &amp; Fastighet</li>
+              </ul>
+            </article>
+
+            <article class="stage">
+              <span class="stage-icon stage-icon--tom" aria-hidden="true"></span>
+              <p class="stage-index">05</p>
+              <h3 class="stage-title">På plats</h3>
+              <p class="stage-text">
+                Skidskola, aktiviteter och köp i kassan hamnar på samma
+                gästkonto som bokningen.
+              </p>
+              <ul class="stage-tags">
+                <li>Skidskola</li>
+                <li>Aktiviteter</li>
+                <li>Kassa</li>
+                <li>Uthyrning</li>
+                <li>Skipass i automat</li>
+              </ul>
+            </article>
+
+            <article class="stage">
+              <span class="stage-icon stage-icon--tom" aria-hidden="true"></span>
+              <p class="stage-index">06</p>
+              <h3 class="stage-title">Avresa</h3>
+              <p class="stage-text">
+                Gästen checkar ut i mobilen och enheten går direkt vidare till
+                städlistan.
+              </p>
+              <ul class="stage-tags">
+                <li>SMS utcheckning</li>
+                <li>Min Resa</li>
+                <li>Städ &amp; Fastighet</li>
+                <li>Avreseläge</li>
+              </ul>
+            </article>
+
+            <article class="stage">
+              <span class="stage-icon stage-icon--tom" aria-hidden="true"></span>
+              <p class="stage-index">07</p>
+              <h3 class="stage-title">Efter resan</h3>
+              <p class="stage-text">
+                Bokningen blir historik på kundkortet och underlag inför nästa
+                säsong.
+              </p>
+              <ul class="stage-tags">
+                <li>Kundkort</li>
+                <li>Registervård</li>
+                <li>Statistik</li>
+                <li>Apsis</li>
+                <li>Återkommande gäst</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Samma resa inifrån: tre kort med kopparstreck, rubrik, text och
+           etikett för vilken del av systemet som bär steget. -->
+      <section class="section" id="inifran">
+        <div class="container">
+          <h2 class="section-title">Samma resa, sedd inifrån.</h2>
+          <p class="section-lead">
+            Det gästen upplever som ett enda köp är hos er tre saker som annars
+            brukar ligga i olika system.
+          </p>
+
+          <div class="aspect-grid">
+            <article class="aspect">
+              <h3 class="aspect-title">Ett register</h3>
+              <p class="aspect-text">
+                Varje bokning hamnar på gästens kundkort. Historik,
+                kontaktuppgifter och sökning i samma vy, oavsett vilken del av
+                anläggningen gästen mötte.
+              </p>
+              <p class="aspect-label">Bokning &amp; Registervård</p>
+            </article>
+
+            <article class="aspect">
+              <h3 class="aspect-title">En drift</h3>
+              <p class="aspect-text">
+                Städrapportering, ankomst- och avreseläge och automatisk
+                incheckning. Fastighet, frontdesk och lås ser samma bild i
+                realtid.
+              </p>
+              <p class="aspect-label">Städ &amp; Fastighet</p>
+            </article>
+
+            <article class="aspect">
+              <h3 class="aspect-title">En ekonomi</h3>
+              <p class="aspect-text">
+                Betalningar, kassor och redovisning i samma system — online, i
+                receptionen eller i backen spelar ingen roll.
+              </p>
+              <p class="aspect-label">Ekonomi</p>
+            </article>
+          </div>
         </div>
       </section>
 

@@ -1057,6 +1057,57 @@ a:hover { color: var(--marin); }
   text-transform: uppercase;
 }
 
+/* Budskapskort: en marknadsföringsrad lyft ur brödtexten och lagd på en
+   egen liten lapp, i samma språk som partnerlapparna på startsidan. */
+.pitch {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  max-width: 46ch;
+  margin-top: 1.75rem;
+  padding: 1rem 1.6rem;
+  background: var(--limestone);
+  border: 1px solid transparent;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 24px -22px rgba(13, 62, 96, .55);
+  color: var(--marin);
+  font-family: var(--serif);
+  font-size: var(--t-md);
+  line-height: 1.3;
+  transform: rotate(-.8deg);
+  transition: transform .2s ease, border-color .2s ease;
+}
+.pitch:hover {
+  transform: rotate(0);
+  border-color: var(--line);
+}
+/* På den ljusa sektionen byter lappen plats i färg med bakgrunden. */
+.section--alt .pitch { background: var(--paper); }
+
+/* Kopparpricken som på partnerlapparna. */
+.pitch::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--copper);
+}
+
+/* Ligger lappen först i sitt avsnitt kommer luften ovanför från sektionen. */
+.pitch:first-child {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* Centrerad variant, för avsnitt där rubriken står mitt på sidan. */
+.pitch--mitten {
+  display: flex;
+  width: fit-content;
+  margin-inline: auto;
+  text-align: left;
+}
+
 /* Nyheter: lappar på en anslagstavla */
 .news {
   padding-top: clamp(3rem, 6vw, 4.5rem);
@@ -1376,6 +1427,7 @@ a:hover { color: var(--marin); }
 }
 
 .stats-title { font-size: var(--t-xl); text-align: center; }
+
 
 .stat-grid {
   display: grid;
@@ -1805,6 +1857,8 @@ a:hover { color: var(--marin); }
   .news-card:focus-within { transform: none; }
   .partner-chip,
   .partner-chip:hover { transform: none; }
+  .pitch,
+  .pitch:hover { transform: none; }
   .module:hover { transform: none; }
   .members-track {
     overflow-x: auto;

@@ -852,6 +852,13 @@ a:hover { color: var(--marin); }
   /* Ytterstegen ställer sig mot sin kant så raden fyller hela bredden. */
   .step:first-child { justify-items: start; text-align: left; }
   .step:last-child { justify-items: end; text-align: right; }
+  /* Numret är lika brett som cirkeln och centreras över den, även i de
+     yttersta stegen där resten av innehållet står mot kanten. */
+  .step:first-child .step-index,
+  .step:last-child .step-index {
+    width: var(--dot);
+    text-align: center;
+  }
   .step-dot,
   .step-index,
   .step-label {

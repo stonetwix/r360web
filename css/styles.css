@@ -346,6 +346,17 @@ a:hover { color: var(--marin); }
 }
 .btn-r360--primary:hover { background: var(--marin-light); border-color: var(--marin-light); color: var(--paper); }
 
+.btn-r360--outline {
+  background: none;
+  border-color: var(--marin);
+  color: var(--marin);
+}
+.btn-r360--outline:hover {
+  background: var(--marin);
+  border-color: var(--marin);
+  color: var(--paper);
+}
+
 .btn-r360--copper {
   background: var(--copper);
   border-color: var(--copper);

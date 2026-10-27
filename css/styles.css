@@ -421,6 +421,11 @@ a:hover { color: var(--marin); }
   width: 100%;
   height: auto;
 }
+/* Kvadratiska illustrationer blir för höga i full spaltbredd. */
+.hero-image--small {
+  max-width: 340px;
+  margin-inline: auto;
+}
 
 /* ---------- 7. Member band ---------- */
 .members {
@@ -720,6 +725,16 @@ a:hover { color: var(--marin); }
   height: 112px;
   border-radius: var(--radius);
   background: var(--paper);
+}
+/* Ikoner (i stället för illustration) får luft inuti brickan. */
+.module-figure--ikon img { padding: 1.75rem; }
+/* Tom bildplats tills en riktig bild finns. */
+.module-figure--tom {
+  width: 112px;
+  height: 112px;
+  border-radius: var(--radius);
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--line);
 }
 /* Rubriken leder kortet nu när numret är borta, och får ett steg större grad. */
 .module-title {

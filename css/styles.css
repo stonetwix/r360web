@@ -1122,10 +1122,6 @@ a:hover { color: var(--marin); }
   margin-bottom: 1.5rem;
 }
 
-/* Tätt mot det ovanför: den negativa marginalen äter upp radens egen
-   bottenluft (gy-4 = 1.5rem) så lappen hamnar nära bilden. */
-.pitch--tatt { margin-top: -1rem; }
-
 /* Centrerad variant, för avsnitt där rubriken står mitt på sidan. */
 .pitch--mitten {
   display: flex;
@@ -1787,7 +1783,6 @@ a:hover { color: var(--marin); }
   margin-top: .25rem;
   font-size: var(--t-sm);
 }
-.contact-line--mild { color: var(--slate); font-size: var(--t-xs); }
 
 .contact-aside .fact-list { margin-top: 0; }
 

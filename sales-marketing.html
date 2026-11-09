@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>r360 | Bokning & drift</title>
+    <title>r360 | Försäljning & marknad</title>
     <meta
       name="description"
-      content="Bokning, logi, skipass, uthyrning, aktiviteter, lås och städ i ett system — kärnan i driften på anläggningen."
+      content="Onlinebokning, agenter, ägare, OTAs och API — alla vägar in till er anläggning, kopplade till samma system."
     />
 
     <link rel="icon" href="assets/favicon/favicon.ico" sizes="32x32" />
@@ -54,7 +54,7 @@
 
           <nav class="site-nav" id="siteNav" aria-label="Huvudmeny">
             <ul class="nav-list">
-              <li><a href="gastresan.html">Gästresan</a></li>
+              <li><a href="guest-journey.html">Gästresan</a></li>
               <li class="nav-has-menu" data-dropdown>
                 <button
                   class="nav-trigger"
@@ -67,17 +67,17 @@
                 </button>
                 <ul class="nav-menu" id="navPlatform" data-dropdown-menu>
                   <li>
-                    <a href="forsaljning-marknad.html">Försäljning &amp; marknad</a>
+                    <a href="sales-marketing.html" aria-current="page">Försäljning &amp; marknad</a>
                   </li>
                   <li>
-                    <a href="bokning-drift.html" aria-current="page">Bokning &amp; drift</a>
+                    <a href="booking-operations.html">Bokning &amp; drift</a>
                   </li>
                   <li>
-                    <a href="ekonomi-uppfoljning.html">Ekonomi &amp; uppföljning</a>
+                    <a href="finance-reporting.html">Ekonomi &amp; uppföljning</a>
                   </li>
                 </ul>
               </li>
-              <li><a href="medlemmarna.html">Kunder</a></li>
+              <li><a href="customers.html">Kunder</a></li>
               <li><a href="partners.html">Partners</a></li>
               <li class="nav-has-menu" data-dropdown>
                 <button
@@ -91,7 +91,7 @@
                 </button>
                 <ul class="nav-menu" id="navAbout" data-dropdown-menu>
                   <li>
-                    <a href="vart-team.html">Vårt team</a>
+                    <a href="our-team.html">Vårt team</a>
                   </li>
                   <li>
                     <a
@@ -153,23 +153,23 @@
         <div class="container">
           <div class="row align-items-center gy-4">
             <div class="col-lg-6">
-              <h1 class="page-title">Bokning &amp; drift.</h1>
+              <h1 class="page-title">Försäljning &amp; marknad.</h1>
               <p class="page-lead">
-                Kärnan i driften. Bokning, logi, skipass, uthyrning, skidskola
-                och städ i samma system — med en gästprofil genom hela
-                anläggningen. I r360 arbetar några av Nordens största resorts
-                som också kan intyga att systemet långsiktigt går att växa med!
+                Alla vägar in till er anläggning. Gästen bokar online, agenter
+                och ägare i egna portaler och era partners via API — logi,
+                skipass, uthyrning och aktiviteter i samma varukorg, kopplat
+                direkt till bokningssystemet.
               </p>
             </div>
 
             <div class="col-lg-6">
               <div class="hero-visual">
                 <img
-                  class="hero-image"
-                  src="assets/affarssystem-hero.png"
-                  alt="Logi, skipass, uthyrning, skidskola och aktiviteter samlas i en varukorg och en betalning."
-                  width="467"
-                  height="346"
+                  class="page-image"
+                  src="assets/online.png"
+                  alt="Onlinebokningen i en dator och i en mobil."
+                  width="2356"
+                  height="1436"
                 />
               </div>
             </div>
@@ -177,17 +177,67 @@
         </div>
       </section>
 
-      <!-- Modulerna -->
-      <section class="section section--tight-top section--tight-bottom" id="moduler">
+      <!-- Onlinebokning: utpekad som sidans huvudmodul -->
+      <section class="section section--alt" id="onlinebokning">
         <div class="container">
-          <h2 class="section-title">Från pappersarbete till automatiserad resortdrift.</h2>
-          <p class="pitch">Halvera administrationen inför nästa högsäsong.</p>
+          <div class="row gy-4 gx-lg-5 align-items-center">
+            <div class="col-lg-7 order-lg-2">
+              <h2 class="section-title">Onlinebokning.</h2>
+              <p class="pitch">
+                Maximera er e-handel med en gemensam varukorg för hela
+                destinationen.
+              </p>
+              <p class="section-lead">
+                Med vår onlinebokning kan era gäster enkelt boka logi,
+                uthyrning, aktiviteter med mera. Här får ni en
+                bokningsupplevelse i framkant där er kunder smidigt kan boka och
+                köpa produkter eller paket. Det innebär att gästen får allt i en
+                varukorg och med det endast ett köp!
+              </p>
 
-          <div class="modules">
+              <aside class="note">
+                <h3 class="note-title">Tillgänglighetsredogörelse</h3>
+                <p class="note-text">
+                  <!-- TODO: riktig länk till VPAT-dokumentet. -->
+                  <a href="#">VPAT – EN 301 549</a>
+                </p>
+
+                <p class="note-label">
+                  Anmäl brister i Onlinebokningens tillgänglighet
+                </p>
+                <p class="note-text">
+                  <a href="mailto:accessibility@r360.se"
+                    >accessibility@r360.se</a
+                  >
+                </p>
+              </aside>
+            </div>
+
+            <div class="col-lg-5 order-lg-1">
+              <img
+                class="feature-image"
+                src="assets/online-booking3.png"
+                alt=""
+                width="556"
+                height="556"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Modulerna -->
+      <section class="section" id="moduler">
+        <div class="container">
+          <h2 class="section-title">Fler försäljningskanaler.</h2>
+
+          <div class="modules modules--no-divider">
             <article class="module">
               <div class="module-figure">
                 <img
-                  src="assets/boka.png"
+                  src="assets/agent.png"
                   alt=""
                   width="556"
                   height="556"
@@ -195,20 +245,18 @@
                 />
               </div>
               <div class="module-body">
-                <h3 class="module-title">Bokning, registervård &amp; integrationer</h3>
+                <h3 class="module-title">Agentbokning</h3>
                 <p class="module-text">
-                  I registervården i r360 sköts all hantering och uppsättning av
-                  det bokningsbara utbudet. Här kan er personal enkelt
-                  skräddarsy ett upplägg som passar er verksamhet. Det är även
-                  här er bokningspersonal administrerar och hanterar inkomna
-                  bokningar.
+                  I r360 kan en agent arbeta på två olika sätt. Antingen via en egen
+                  integration via vårt API eller i vår agentportal. När en bokning
+                  görs via portalen går den direkt in till affärssystemet.
                 </p>
               </div>
             </article>
             <article class="module">
               <div class="module-figure">
                 <img
-                  src="assets/logi.png"
+                  src="assets/owner.png"
                   alt=""
                   width="556"
                   height="556"
@@ -216,62 +264,74 @@
                 />
               </div>
               <div class="module-body">
-                <h3 class="module-title">Logi</h3>
+                <h3 class="module-title">Ägarbokning</h3>
                 <p class="module-text">
-                  I r360 kan ni enkelt administrera era olika boenden (stugor,
-                  lägenheter, ställplatser m.m). Beroende på er verksamhet kan
-                  ni smidigt lägga upp olika områdespooler för enklare bokning
-                  och registervård. Här kan ni också lägga till obligatoriska
-                  tillbehör eller sälja fler tillbehör.
+                  I ägarportalen kan era stugägare boka sin egen stuga samt se
+                  underlag för gästbokningar och kommande utbetalningar.
+                </p>
+              </div>
+            </article>
+            <!-- TODO: skriv riktig text om OTAs. -->
+            <article class="module">
+              <div class="module-figure">
+                <img
+                  src="assets/otas.png"
+                  alt=""
+                  width="556"
+                  height="556"
+                  loading="lazy"
+                />
+              </div>
+              <div class="module-body">
+                <h3 class="module-title">OTAs</h3>
+                <p class="module-text">
+                  Platshållare — beskriv hur r360 kopplas mot OTAs (t.ex.
+                  Booking.com och Airbnb) och vad det ger er.
                 </p>
               </div>
             </article>
             <article class="module">
               <div class="module-figure">
                 <img
-                  src="assets/skipass.png"
+                  src="assets/api.png"
                   alt=""
-                  width="556"
-                  height="556"
+                  width="560"
+                  height="560"
                   loading="lazy"
                 />
               </div>
               <div class="module-body">
-                <h3 class="module-title">Biljetter &amp; skipass</h3>
+                <h3 class="module-title">API</h3>
                 <p class="module-text">
-                  I r360 kan ni via någon av våra partners, Skidata eller Axess,
-                  sköta försäljningen av skipass. När skipassen är betalda
-                  aktiveras de direkt hos Skidata/Axess beroende på vilken
-                  leverantör ni har. Erbjuder ni säsongskort eller ledkort kan
-                  ni även sälja detta i skipassmodulen.
+                  Med ett API har ni möjlighet att driva egen utveckling
+                  kopplad till r360. Exempelvis kan ni ha en egen webbokning
+                  eller koppla på någon av era leverantörer eller agenter.
                 </p>
               </div>
             </article>
             <article class="module">
               <div class="module-figure">
                 <img
-                  src="assets/uthyrning.png"
+                  src="assets/marketing.png"
                   alt=""
-                  width="556"
-                  height="556"
+                  width="560"
+                  height="560"
                   loading="lazy"
                 />
               </div>
               <div class="module-body">
-                <h3 class="module-title">Uthyrning</h3>
+                <h3 class="module-title">Marknadsföring &amp; kommunikation</h3>
                 <p class="module-text">
-                  Uthyrningsklienten möjliggör förhandsbokning av utrustning.
-                  Här kan ni hyra ut alltifrån skidor, cykel till kanoter och
-                  SUP-brädor som finns på er anläggning. Med en egen modul kan
-                  er personal i uthyrningen enkelt hantera streckkodsavläsning,
-                  multihyra, kassafunktion med mera.
+                  Kom igång med enkla automatiserade e-post eller sms-utskick
+                  för att öka mersäljning, göra kundenkäter eller kanske
+                  informera om helgens aktiviteter.
                 </p>
               </div>
             </article>
             <article class="module">
               <div class="module-figure">
                 <img
-                  src="assets/aktivitet.png"
+                  src="assets/my-trip.png"
                   alt=""
                   width="556"
                   height="556"
@@ -279,89 +339,15 @@
                 />
               </div>
               <div class="module-body">
-                <h3 class="module-title">Aktiviteter &amp; skidskola</h3>
+                <h3 class="module-title">Min Resa &amp; Min Biljett</h3>
                 <p class="module-text">
-                  I aktivitetsmodulen har ni det perfekta boknings- och
-                  planeringsverktyget för alla aktiviteter som är tids- eller
-                  resursstyrda. Här kan ni exempelvis hantera allt ifrån
-                  skidskoleverksamhet till SPA-verksamhet och enkelt särskilja
-                  på gruppbokningar eller exempelvis privatlektioner.
+                  Via min resa kan era besökare som bor i ett boende med digitalt
+                  anslutet lås själva hantera in-/och utcheckning samt ta del av
+                  vald information från er.
                 </p>
-              </div>
-            </article>
-            <article class="module">
-              <div class="module-figure">
-                <img
-                  src="assets/paket.png"
-                  alt=""
-                  width="556"
-                  height="556"
-                  loading="lazy"
-                />
-              </div>
-              <div class="module-body">
-                <h3 class="module-title">Paket</h3>
                 <p class="module-text">
-                  I r360 kan ni enkelt paketera era bokningstyper utefter vad
-                  som passar er verksamhet.
-                </p>
-              </div>
-            </article>
-            <article class="module">
-              <div class="module-figure">
-                <img
-                  src="assets/gok.png"
-                  alt=""
-                  width="556"
-                  height="556"
-                  loading="lazy"
-                />
-              </div>
-              <div class="module-body">
-                <h3 class="module-title">Grupp &amp; konferens</h3>
-                <p class="module-text">
-                  I r360 kan ni arbeta med grupp- och konferensbokningar utefter
-                  vad som passar er verksamhet.
-                </p>
-              </div>
-            </article>
-            <article class="module">
-              <div class="module-figure">
-                <img
-                  src="assets/minresa.png"
-                  alt=""
-                  width="556"
-                  height="556"
-                  loading="lazy"
-                />
-              </div>
-              <div class="module-body">
-                <h3 class="module-title">Digitala lås &amp; accesslösningar</h3>
-                <p class="module-text">
-                  Med digitala lås underlättar ni både för era gäster och i er
-                  egen administration. Ni erbjuder gästen en smidigare in- &amp;
-                  utcheckning (via sms), slipper nyckelhantering och har
-                  möjlighet att erbjuda in- och utcheckning dygnet runt.
-                </p>
-              </div>
-            </article>
-            <article class="module">
-              <div class="module-figure">
-                <img
-                  src="assets/stadofast.png"
-                  alt=""
-                  width="556"
-                  height="556"
-                  loading="lazy"
-                />
-              </div>
-              <div class="module-body">
-                <h3 class="module-title">Städ &amp; fastighet</h3>
-                <p class="module-text">
-                  Med hjälp av denna modul kan fastighet eller städ städrapportera
-                  och markera en enhet direkt i r360 för automatisk incheckning.
-                  Modulen ger er även en totalöversikt över ankomst-/avreseläget på
-                  anläggningen.
+                  Via mina biljetter kan era besökare istället hämta ut förbokade
+                  skipass via en QR-kod i era automater.
                 </p>
               </div>
             </article>
@@ -379,7 +365,7 @@
         <div class="container">
           <div class="news-head">
             <h2 class="news-title">Nyheter!</h2>
-            <p class="news-note">Det senaste inom bokning &amp; drift</p>
+            <p class="news-note">Det senaste inom försäljning &amp; marknad</p>
           </div>
 
           <div class="news-grid">
@@ -390,8 +376,8 @@
               </p>
               <h3 class="news-card-title">Rubrik på nyheten</h3>
               <p class="news-text">
-                Två eller tre rader ingress som sammanfattar nyheten. Byt ut mot
-                er egen text.
+                Två eller tre rader ingress som sammanfattar nyheten. Byt ut
+                mot er egen text.
               </p>
               <a class="link-arrow" href="#nyhet-2026-09-18" data-news-open
                 >Läs mer</a
@@ -418,8 +404,8 @@
               </p>
               <h3 class="news-card-title">Äldre nyhet</h3>
               <p class="news-text">
-                Tre kort räcker på sidan. Äldre nyheter kan flyttas till en egen
-                sida när de blir fler.
+                Tre kort räcker på sidan. Äldre nyheter kan flyttas till en
+                egen sida när de blir fler.
               </p>
               <a class="link-arrow" href="#nyhet-2026-08-14" data-news-open
                 >Läs mer</a
@@ -585,18 +571,18 @@
           <div class="col-6 col-lg-2">
             <h2 class="footer-heading">Plattformen</h2>
             <ul class="footer-list">
-              <li><a href="forsaljning-marknad.html">Försäljning &amp; marknad</a></li>
-              <li><a href="bokning-drift.html">Bokning &amp; drift</a></li>
-              <li><a href="ekonomi-uppfoljning.html">Ekonomi &amp; uppföljning</a></li>
+              <li><a href="sales-marketing.html">Försäljning &amp; marknad</a></li>
+              <li><a href="booking-operations.html">Bokning &amp; drift</a></li>
+              <li><a href="finance-reporting.html">Ekonomi &amp; uppföljning</a></li>
             </ul>
           </div>
 
           <div class="col-6 col-lg-2">
             <h2 class="footer-heading">Bolaget</h2>
             <ul class="footer-list">
-              <li><a href="medlemmarna.html">Kunder</a></li>
+              <li><a href="customers.html">Kunder</a></li>
               <li><a href="partners.html">Partners</a></li>
-              <li><a href="vart-team.html">Om oss</a></li>
+              <li><a href="our-team.html">Om oss</a></li>
             </ul>
           </div>
 
